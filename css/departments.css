@@ -1,0 +1,39 @@
+/* Departments Page Styles */
+.search-container { 
+    margin: 2rem 0; 
+    text-align: center; 
+}
+
+.search-input { 
+    padding: 0.8rem; 
+    width: 80%; 
+    max-width: 500px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 1rem; 
+}
+
+.departments-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    padding: 2rem 0; 
+}
+
+.department-card { 
+    background: var(--card-bg); 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    margin-top: 1rem;
+}

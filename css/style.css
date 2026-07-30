@@ -175,14 +175,3 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-    }
-    .split-layout, .testimonial-grid, .college-stats {
-        flex-direction: column;
-    }
-}
