@@ -1,0 +1,20 @@
+body.dark-mode {
+    --bg-color: #111827;
+    --card-bg: #1F2937;
+    --text-main: #F9FAFB;
+}
+
+.dark-mode-toggle {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 1rem;
+    font-family: var(--font-body);
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255,255,255,0.1);
+}
