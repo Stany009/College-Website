@@ -1,7 +1,19 @@
 /* Animations requested: Fade Up, Slide Left, Slide Right, Scale on Hover, Floating Hero, Animated Counters, Scroll Progress Bar, Smooth Scroll */
+/* 60fps optimizations: GPU-accelerated transforms and opacity */
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Force GPU compositing for smoother animations */
+.fade-up,
+.slide-left,
+.slide-right,
+.scale-hover,
+.floating-hero {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
 }
 
 .fade-up {
@@ -63,4 +75,29 @@ html {
     background: var(--accent);
     width: 0%;
     z-index: 2000;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Navbar sticky positioning for smooth scrolling */
+.navbar {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Lightbox transitions */
+.lightbox {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.lightbox img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Gallery item hover optimization */
+.gallery-item img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
