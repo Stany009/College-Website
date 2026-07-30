@@ -1,0 +1,188 @@
+:root {
+    --primary: #003366;
+    --accent: #FDB913;
+    --bg-color: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --text-main: #333333;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body.dark-mode {
+    --bg-color: #111827;
+    --card-bg: #1F2937;
+    --text-main: #F9FAFB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.hero {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.quick-links {
+    margin-top: 2rem;
+}
+
+.college-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.split-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.split-layout > div {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.notices ul, .events ul {
+    list-style: none;
+}
+
+.notices li, .events li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.testimonials {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .split-layout, .testimonial-grid, .college-stats {
+        flex-direction: column;
+    }
+}
