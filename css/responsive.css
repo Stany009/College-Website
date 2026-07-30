@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+    /* Tablet */
+    .hero h2 { font-size: 2rem; }
+    .stat-card h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    /* Mobile */
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    
+    .split-layout, .testimonial-grid, .college-stats {
+        flex-direction: column;
+    }
+    
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
