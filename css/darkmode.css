@@ -1,105 +1,222 @@
 /* ============================================================
    Dark Mode Styles
+   Adapts the Luxe Academic theme for low-light environments.
    ============================================================ */
 
-/* Dark mode toggle button */
-.dark-mode-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+/* ---- Dark Mode Variables Override ---- */
+body.dark-mode {
+    --bg: #060E1A;
+    --bg-elevated: #0A1628;
+    --bg-subtle: #0F1F33;
+    --bg-dark: #040914;
+
+    --text: #F7F8FA;
+    --text-secondary: #A0B0C4;
+    --text-muted: #647B9E;
+    --text-inverse: #121820;
+
+    /* Cards in dark mode: lower opacity, more border visibility */
+    --card: rgba(15, 31, 51, 0.45);
+    --card-hover: rgba(20, 42, 69, 0.65);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.40);
+    --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.60);
+
+    --border: #1E3048;
+    --border-light: #2A405D;
+
+    --primary: #4A8FD9;
+    --primary-light: #70A9E3;
+    --primary-dark: #2B5A8F;
+
+    --accent: #E2C268;
+    --accent-light: #F0D58C;
+    --accent-dark: #C9A84C;
+
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.40);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.50);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.60);
+    --shadow-glow: 0 0 24px rgba(226, 194, 104, 0.15);
+}
+
+/* ---- Global Adjustments ---- */
+body.dark-mode {
+    background-image: 
+        radial-gradient(circle at 15% 10%, rgba(226, 194, 104, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(74, 143, 217, 0.04) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+body.dark-mode .section-header h2::after {
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+body.dark-mode .section-accent::after {
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+/* ---- Navbar ---- */
+body.dark-mode .navbar {
     background: transparent;
-    border: none;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    transition: all var(--duration-fast);
-    position: relative;
 }
 
-.dark-mode-toggle:hover {
-    background: rgba(11,61,145,0.08);
-    color: var(--primary);
+body.dark-mode .navbar.scrolled {
+    background: rgba(10, 22, 40, 0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.40);
 }
 
-.navbar:not(.scrolled) .dark-mode-toggle {
-    color: rgba(255,255,255,0.85);
+body.dark-mode .nav-links a {
+    color: rgba(255,255,255,0.70);
 }
 
-.navbar:not(.scrolled) .dark-mode-toggle:hover {
-    background: rgba(255,255,255,0.15);
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+    color: var(--accent);
+    background: rgba(255,255,255,0.06);
+}
+
+body.dark-mode .logo-text {
     color: white;
 }
 
-/* Sun/Moon icon transitions */
-.dark-mode-toggle .icon-sun,
-.dark-mode-toggle .icon-moon {
-    transition: all var(--duration-normal) var(--ease-out);
-    position: absolute;
+body.dark-mode .logo-icon {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--bg-dark);
 }
 
-.dark-mode-toggle .icon-sun {
-    opacity: 0;
-    transform: rotate(-90deg) scale(0.5);
+body.dark-mode .hamburger span {
+    background: white;
 }
 
-.dark-mode-toggle .icon-moon {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+body.dark-mode .mobile-nav {
+    border-left: 1px solid var(--border);
 }
 
-body.dark-mode .dark-mode-toggle .icon-sun {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+body.dark-mode .nav-btn {
+    color: rgba(255,255,255,0.70);
 }
 
-body.dark-mode .dark-mode-toggle .icon-moon {
-    opacity: 0;
-    transform: rotate(90deg) scale(0.5);
+body.dark-mode .nav-btn:hover {
+    background: rgba(255,255,255,0.10);
+    color: white;
 }
 
-/* Dark mode specific overrides */
-body.dark-mode .course-card { background: var(--card); }
-body.dark-mode .testimonial-card { background: var(--card); }
-body.dark-mode .faq-item { background: var(--card); }
-body.dark-mode .notice-item,
-body.dark-mode .event-item { background: var(--bg-subtle); }
-
-body.dark-mode .hero-floating-card {
-    background: rgba(31,41,55,0.95);
+/* ---- Buttons ---- */
+body.dark-mode .btn-outline {
+    border-color: rgba(255,255,255,0.20);
     color: var(--text);
 }
 
-body.dark-mode .hero-floating-card .card-text strong { color: var(--text); }
-body.dark-mode .hero-floating-card .card-text span { color: var(--text-muted); }
-
-body.dark-mode .newsletter-form input {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.1);
+body.dark-mode .btn-outline:hover {
+    background: rgba(255,255,255,0.10);
+    border-color: rgba(255,255,255,0.40);
+    color: white;
 }
 
+body.dark-mode .btn-ghost {
+    color: var(--text-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .btn-ghost:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+    border-color: rgba(255,255,255,0.20);
+}
+
+body.dark-mode .btn-white {
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+}
+
+body.dark-mode .btn-white:hover {
+    background: rgba(255,255,255,0.20);
+    color: white;
+}
+
+/* ---- Cards ---- */
+body.dark-mode .card,
+body.dark-mode .card-flat,
+body.dark-mode .course-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .card-feature {
+    background: var(--card);
+    border-color: var(--card-border);
+}
+
+body.dark-mode .course-card:hover,
+body.dark-mode .testimonial-card:hover,
+body.dark-mode .card:hover,
+body.dark-mode .card-feature:hover {
+    border-color: rgba(226, 194, 104, 0.25);
+    background: var(--card-hover);
+}
+
+body.dark-mode .stats-grid {
+    background: var(--card);
+    border-color: var(--card-border);
+}
+
+/* ---- Forms ---- */
 body.dark-mode .form-input,
 body.dark-mode .form-textarea,
 body.dark-mode .form-select {
-    background: var(--bg-subtle);
+    background: rgba(0,0,0,0.20);
     border-color: var(--border);
     color: var(--text);
 }
 
-body.dark-mode ::selection {
-    background: rgba(212,175,55,0.2);
+body.dark-mode .form-input:focus,
+body.dark-mode .form-textarea:focus,
+body.dark-mode .form-select:focus {
+    background: rgba(0,0,0,0.40);
+    border-color: var(--accent);
 }
 
-/* Smooth transition for dark mode */
-body,
-body.dark-mode .navbar.scrolled,
-body.dark-mode .card,
-body.dark-mode .faq-item,
-body.dark-mode .notice-item,
+/* ---- Specific Components ---- */
+body.dark-mode .notice-item, 
 body.dark-mode .event-item {
-    transition: background-color var(--duration-normal) var(--ease-out),
-                color var(--duration-normal) var(--ease-out),
-                border-color var(--duration-normal) var(--ease-out);
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .notice-item:hover, 
+body.dark-mode .event-item:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .faq-item {
+    background: rgba(255,255,255,0.03);
+    border-color: var(--border);
+}
+
+body.dark-mode .faq-item.active {
+    background: rgba(226, 194, 104, 0.05);
+    border-color: var(--accent);
+}
+
+body.dark-mode .faq-question {
+    color: var(--text);
+}
+
+body.dark-mode .timeline-marker {
+    box-shadow: 0 0 0 4px var(--bg-dark);
+}
+
+/* ---- Theme Toggle Button specific styling ---- */
+#theme-toggle .moon-icon {
+    display: none;
+}
+#theme-toggle .sun-icon {
+    display: block;
+}
+
+body:not(.dark-mode) #theme-toggle .moon-icon {
+    display: block;
+}
+body:not(.dark-mode) #theme-toggle .sun-icon {
+    display: none;
 }
