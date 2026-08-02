@@ -1,116 +1,99 @@
 /* ============================================================
    Dark Mode Styles
-   Adapts the Luxe Academic theme for low-light environments.
+   Premium Editorial Dark Theme
    ============================================================ */
 
 /* ---- Dark Mode Variables Override ---- */
 body.dark-mode {
-    --bg: #060E1A;
-    --bg-elevated: #0A1628;
-    --bg-subtle: #0F1F33;
-    --bg-dark: #040914;
+    --bg: #111111;
+    --bg-elevated: #1A1A1A;
+    --bg-subtle: #222222;
 
-    --text: #F7F8FA;
-    --text-secondary: #A0B0C4;
-    --text-muted: #647B9E;
-    --text-inverse: #121820;
+    --text: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --text-muted: #666666;
+    --text-inverse: #111111;
 
-    /* Cards in dark mode: lower opacity, more border visibility */
-    --card: rgba(15, 31, 51, 0.45);
-    --card-hover: rgba(20, 42, 69, 0.65);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.40);
-    --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.60);
+    --card: #1A1A1A;
+    --card-hover: #222222;
+    --card-border: #2A2A2A;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    --card-shadow-hover: 0 10px 25px rgba(0,0,0,0.3);
 
-    --border: #1E3048;
-    --border-light: #2A405D;
+    --border: #2A2A2A;
+    --border-light: #222222;
 
-    --primary: #4A8FD9;
-    --primary-light: #70A9E3;
-    --primary-dark: #2B5A8F;
+    --primary: #F5F5F5;
+    --primary-light: #CCCCCC;
+    --primary-dark: #FFFFFF;
 
-    --accent: #E2C268;
-    --accent-light: #F0D58C;
-    --accent-dark: #C9A84C;
+    --accent: #D4A843;
+    --accent-light: #E8C06A;
+    --accent-dark: #B8860B;
 
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.40);
-    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.50);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.60);
-    --shadow-glow: 0 0 24px rgba(226, 194, 104, 0.15);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.35);
+    --shadow-xl: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* ---- Global Adjustments ---- */
 body.dark-mode {
-    background-image: 
-        radial-gradient(circle at 15% 10%, rgba(226, 194, 104, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(74, 143, 217, 0.04) 0%, transparent 40%);
-    background-attachment: fixed;
+    background-color: #111111;
 }
 
 body.dark-mode .section-header h2::after {
-    background: linear-gradient(90deg, var(--accent), var(--primary));
+    background: var(--muted-gold);
 }
 
 body.dark-mode .section-accent::after {
-    background: linear-gradient(90deg, var(--accent), var(--primary));
+    background: var(--muted-gold);
 }
 
 /* ---- Navbar ---- */
-body.dark-mode .navbar {
-    background: transparent;
-}
-
 body.dark-mode .navbar.scrolled {
-    background: rgba(10, 22, 40, 0.85);
+    background: rgba(17, 17, 17, 0.95);
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.40);
 }
 
 body.dark-mode .nav-links a {
-    color: rgba(255,255,255,0.70);
+    color: rgba(255,255,255,0.55);
 }
 
 body.dark-mode .nav-links a:hover,
 body.dark-mode .nav-links a.active {
     color: var(--accent);
-    background: rgba(255,255,255,0.06);
 }
 
 body.dark-mode .logo-text {
-    color: white;
+    color: var(--text);
 }
 
 body.dark-mode .logo-icon {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    color: var(--bg-dark);
+    background: var(--accent);
+    color: var(--charcoal);
 }
 
 body.dark-mode .hamburger span {
-    background: white;
-}
-
-body.dark-mode .mobile-nav {
-    border-left: 1px solid var(--border);
+    background: var(--text);
 }
 
 body.dark-mode .nav-btn {
-    color: rgba(255,255,255,0.70);
+    color: rgba(255,255,255,0.55);
 }
 
 body.dark-mode .nav-btn:hover {
-    background: rgba(255,255,255,0.10);
     color: white;
 }
 
 /* ---- Buttons ---- */
 body.dark-mode .btn-outline {
-    border-color: rgba(255,255,255,0.20);
+    border-color: rgba(255,255,255,0.15);
     color: var(--text);
 }
 
 body.dark-mode .btn-outline:hover {
-    background: rgba(255,255,255,0.10);
-    border-color: rgba(255,255,255,0.40);
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.25);
     color: white;
 }
 
@@ -120,20 +103,19 @@ body.dark-mode .btn-ghost {
 }
 
 body.dark-mode .btn-ghost:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.04);
     color: white;
-    border-color: rgba(255,255,255,0.20);
+    border-color: rgba(255,255,255,0.15);
 }
 
 body.dark-mode .btn-white {
-    background: rgba(255,255,255,0.10);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
     color: white;
 }
 
 body.dark-mode .btn-white:hover {
-    background: rgba(255,255,255,0.20);
+    background: rgba(255,255,255,0.12);
     color: white;
 }
 
@@ -151,7 +133,7 @@ body.dark-mode .course-card:hover,
 body.dark-mode .testimonial-card:hover,
 body.dark-mode .card:hover,
 body.dark-mode .card-feature:hover {
-    border-color: rgba(226, 194, 104, 0.25);
+    border-color: rgba(212,168,67,0.2);
     background: var(--card-hover);
 }
 
@@ -164,7 +146,7 @@ body.dark-mode .stats-grid {
 body.dark-mode .form-input,
 body.dark-mode .form-textarea,
 body.dark-mode .form-select {
-    background: rgba(0,0,0,0.20);
+    background: rgba(0,0,0,0.3);
     border-color: var(--border);
     color: var(--text);
 }
@@ -172,29 +154,29 @@ body.dark-mode .form-select {
 body.dark-mode .form-input:focus,
 body.dark-mode .form-textarea:focus,
 body.dark-mode .form-select:focus {
-    background: rgba(0,0,0,0.40);
+    background: rgba(0,0,0,0.4);
     border-color: var(--accent);
 }
 
 /* ---- Specific Components ---- */
-body.dark-mode .notice-item, 
+body.dark-mode .notice-item,
 body.dark-mode .event-item {
-    background: rgba(255,255,255,0.04);
-    border-color: rgba(255,255,255,0.08);
-}
-
-body.dark-mode .notice-item:hover, 
-body.dark-mode .event-item:hover {
-    background: rgba(255,255,255,0.08);
-}
-
-body.dark-mode .faq-item {
     background: rgba(255,255,255,0.03);
     border-color: var(--border);
 }
 
+body.dark-mode .notice-item:hover,
+body.dark-mode .event-item:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+body.dark-mode .faq-item {
+    background: rgba(255,255,255,0.02);
+    border-color: var(--border);
+}
+
 body.dark-mode .faq-item.active {
-    background: rgba(226, 194, 104, 0.05);
+    background: rgba(184,134,11,0.04);
     border-color: var(--accent);
 }
 
@@ -203,10 +185,10 @@ body.dark-mode .faq-question {
 }
 
 body.dark-mode .timeline-marker {
-    box-shadow: 0 0 0 4px var(--bg-dark);
+    box-shadow: 0 0 0 3px var(--bg-dark);
 }
 
-/* ---- Theme Toggle Button specific styling ---- */
+/* ---- Theme Toggle Button ---- */
 #theme-toggle .moon-icon {
     display: none;
 }

@@ -1,5 +1,6 @@
 /* ============================================================
    Student Portal – Premium Dashboard Styles
+   Editorial
    ============================================================ */
 
 .login-screen {
@@ -16,8 +17,8 @@
 .login-card {
     background: var(--card);
     padding: var(--space-10);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 420px;
     text-align: center;
@@ -32,8 +33,8 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+    height: 2px;
+    background: var(--muted-gold);
 }
 
 .portal-layout {
@@ -44,7 +45,7 @@
 
 .sidebar {
     width: 260px;
-    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: var(--charcoal);
     color: white;
     padding: var(--space-6) var(--space-4);
     position: fixed;
@@ -53,7 +54,6 @@
     bottom: 0;
     overflow-y: auto;
     z-index: var(--z-sticky);
-    border-right: 1px solid rgba(255,255,255,0.1);
 }
 
 .sidebar::after {
@@ -62,8 +62,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+    height: 80px;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
     pointer-events: none;
 }
 
@@ -80,22 +80,23 @@
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-3) var(--space-4);
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.55);
     text-decoration: none;
     border-radius: var(--radius-md);
-    font-size: 0.9375rem;
+    font-family: var(--font-nav);
+    font-size: 0.8125rem;
     font-weight: 500;
     transition: all var(--duration-fast);
 }
 
 .sidebar-nav a:hover {
-    background: rgba(255,255,255,0.1);
-    color: white;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.8);
 }
 
 .sidebar-nav a.active {
-    background: rgba(255,255,255,0.15);
-    color: white;
+    background: rgba(184,134,11,0.12);
+    color: var(--muted-gold-light);
     font-weight: 600;
     position: relative;
 }
@@ -106,10 +107,10 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 3px;
+    width: 2px;
     height: 60%;
-    background: var(--secondary);
-    border-radius: 0 2px 2px 0;
+    background: var(--muted-gold);
+    border-radius: 0 1px 1px 0;
 }
 
 .dashboard-content {
@@ -129,7 +130,7 @@
 .dash-card {
     background: var(--card);
     padding: var(--space-6);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     border: 1px solid var(--card-border);
     transition: all var(--duration-normal) var(--ease-out);
     position: relative;
@@ -141,26 +142,25 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(184,134,11,0.04) 0%, transparent 70%);
     pointer-events: none;
 }
 
 .dash-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-    border-color: transparent;
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+    border-color: var(--border);
 }
 
 /* Portal stat numbers - gold accent */
 .portal-stat {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--secondary);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--muted-gold);
     line-height: 1;
-    letter-spacing: -0.03em;
 }
 
 /* Portal section header */
@@ -179,7 +179,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, var(--border), transparent);
+    background: var(--border);
 }
 
 /* Responsive */
@@ -196,7 +196,7 @@
         flex-wrap: wrap;
         gap: var(--space-2);
     }
-    .sidebar-nav a { padding: var(--space-2) var(--space-3); font-size: 0.8125rem; }
+    .sidebar-nav a { padding: var(--space-2) var(--space-3); font-size: 0.75rem; }
     .dashboard-content { margin-left: 0; padding: var(--space-4); }
     .dashboard-grid { grid-template-columns: 1fr; }
     .sidebar-profile { display: none; }

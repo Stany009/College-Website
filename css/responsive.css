@@ -1,6 +1,7 @@
 /* ============================================================
    Responsive Breakpoints
    Desktop First → Mobile
+   Premium Editorial
    ============================================================ */
 
 /* Large Desktop (1400px+) */
@@ -26,7 +27,7 @@
         padding-top: var(--space-20);
     }
 
-    .hero-content { 
+    .hero-content {
         max-width: 800px;
         margin: 0 auto;
     }
@@ -40,7 +41,7 @@
         max-width: 700px;
         margin: 0 auto;
     }
-    
+
     .hero-floating-card.card-1 { top: -20px; right: 10%; }
     .hero-floating-card.card-2 { bottom: -20px; left: 10%; }
 
@@ -48,9 +49,9 @@
         margin-top: -30px;
         padding: 0 var(--space-4);
     }
-    
-    .stats-grid { 
-        grid-template-columns: repeat(2, 1fr); 
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-6) var(--space-4);
     }
     .stat-item:nth-child(2)::after { display: none; }
@@ -75,29 +76,25 @@
 
     /* Hide desktop nav, show hamburger */
     .nav-links, .nav-actions:not(.hamburger-wrapper) { display: none; }
-    
-    .nav-actions {
-        /* Keep theme toggle visible on mobile if it exists inside .nav-actions */
-    }
-    
+
     .nav-actions .btn:not(#theme-toggle) { display: none; }
-    
+
     .hamburger { display: flex; }
     .mobile-nav { display: block; }
 
     /* Hero */
     .hero { min-height: auto; padding: calc(var(--navbar-height) + var(--space-10)) 0 var(--space-16); }
-    .hero-floating-card { display: none; } /* Hide floating cards on mobile to reduce clutter */
+    .hero-floating-card { display: none; }
     .hero-actions { flex-direction: column; align-items: stretch; max-width: 320px; margin-left: auto; margin-right: auto; }
     .hero-stats { flex-direction: column; gap: var(--space-6); align-items: center; }
-    
+
     /* Stats Bar */
     .stats-bar { margin-top: 0; padding: 0; }
-    .stats-grid { 
-        border-radius: 0; 
-        border-left: none; 
+    .stats-grid {
+        border-radius: 0;
+        border-left: none;
         border-right: none;
-        padding: var(--space-8) var(--space-4); 
+        padding: var(--space-8) var(--space-4);
     }
     .stat-item::after { display: none !important; }
 
@@ -124,16 +121,16 @@
     .container { width: 92%; }
 
     .hero { padding: calc(var(--navbar-height) + var(--space-8)) 0 var(--space-12); }
-    
+
     .stats-grid { grid-template-columns: 1fr; gap: var(--space-8); }
-    .stat-number { font-size: 2.5rem; }
+    .stat-number { font-size: 2.25rem; }
 
     .section { padding: var(--space-12) 0; }
     .card, .course-card-body, .testimonial-card { padding: var(--space-6); }
 
-    .newsletter-section::before, 
-    .newsletter-section::after { 
-        display: none; 
+    .newsletter-section::before,
+    .newsletter-section::after {
+        display: none;
     }
 }
 
@@ -148,7 +145,7 @@
     .hero h1, .page-hero h1 { color: black; font-size: 2rem; }
     .hero-description, .page-hero p { color: #333; }
     .section { padding: 1rem 0; }
-    
+
     .card, .course-card, .testimonial-card {
         border: 1px solid #ddd;
         background: white;
