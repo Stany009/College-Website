@@ -197,12 +197,21 @@
 
             <div class="portal-tab" id="tab-notifications" style="display: none;">
                 <div class="portal-section-header">
-                    <h2>Notifications</h2>
+                    <h2>Notice Board</h2>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-                    <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--primary);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">Semester Exam Schedule Released</strong><small style="color: var(--text-muted);">2 hours ago</small></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">The examination schedule for the current semester has been published. Check the exam portal for details.</p></div>
-                    <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--success);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">Assignment Graded</strong><small style="color: var(--text-muted);">1 day ago</small></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Your Web Development Project 2 has been graded. Score: 38/50.</p></div>
-                    <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--secondary);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">Library Book Due</strong><small style="color: var(--text-muted);">3 days ago</small></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">"Database System Concepts" is due for return by August 5, 2026.</p></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                        <h3 style="font-size: 1.125rem; margin-bottom: var(--space-2);">Exams & Timetables</h3>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--error);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">Degree College Timetables</strong><small style="color: var(--text-muted);">New</small></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">First Half 2026 Exam timetables for all Degree College courses are now available.</p></div>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--warning);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">ATKT Exam Forms</strong><small style="color: var(--text-muted);">Urgent</small></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Forms for Sem I, II, III & IV (Internal/External) must be submitted by Friday.</p></div>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--primary);"><div style="display: flex; justify-content: space-between;"><strong style="font-size: 0.9375rem;">Photocopy & Revaluation</strong></div><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Apply for photocopy/revaluation of answer books for recent exams.</p></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                        <h3 style="font-size: 1.125rem; margin-bottom: var(--space-2);">Important Links & Forms</h3>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--success);"><strong style="font-size: 0.9375rem;">NPTEL / Swayam</strong><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Register for NPTEL/Swayam online certification courses. <a href="#">Click here</a></p></div>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--info);"><strong style="font-size: 0.9375rem;">Anti-Ragging Undertaking</strong><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Mandatory online anti-ragging undertaking for all students. <a href="#">Fill form</a></p></div>
+                        <div class="card" style="padding: var(--space-4); border-left: 4px solid var(--secondary);"><strong style="font-size: 0.9375rem;">Railway Concession</strong><p style="margin: var(--space-2) 0 0; font-size: 0.875rem;">Apply for local train concession passes online. <a href="#">Apply</a></p></div>
+                    </div>
                 </div>
             </div>
 
