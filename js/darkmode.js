@@ -1,24 +1,35 @@
+/* ============================================================
+   Dark Mode – Toggle with System Preference Detection
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Add toggle button to navbar
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'dark-mode-toggle';
-        toggleBtn.innerText = '🌙 / ☀️';
-        navLinks.appendChild(toggleBtn);
 
-        // Check local storage
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
+    const toggleBtns = document.querySelectorAll('.dark-mode-toggle');
 
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
+    // Check for saved preference or system preference
+    const savedMode = localStorage.getItem('darkMode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedMode === 'enabled' || (!savedMode && prefersDark)) {
+        document.body.classList.add('dark-mode');
     }
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        });
+    });
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    });
 });

@@ -3,64 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Andrew's College | About</title>
+    <meta name="description" content="Learn about St. Andrew's College – our 50-year legacy of academic excellence, vision, mission, and world-class campus.">
+    <title>About Us | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/darkmode.css">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="navbar scrolled" role="banner">
         <div class="container">
-            <h1 class="logo">St. Andrew's College</h1>
-            <nav class="nav-links">
+            <a href="index.html" class="logo" aria-label="St. Andrew's College Home">
+                <div class="logo-icon">SA</div>
+                <div class="logo-text">
+                    St. Andrew's College
+                    <small>Excellence in Education</small>
+                </div>
+            </a>
+            <nav class="nav-links" role="navigation" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="admissions.html">Admissions</a>
                 <a href="departments.html">Departments</a>
+                <a href="events.html">Events</a>
+                <a href="placements.html">Placements</a>
+                <a href="campus-life.html">Campus Life</a>
                 <a href="gallery.html">Gallery</a>
-                <a href="student-portal.html">Student Portal</a>
+                <a href="library.html">Library</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <button class="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+            <div class="nav-actions">
+                <button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button>
+                <a href="student-portal.html" class="nav-cta">Student Portal</a>
+                <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
         </div>
     </header>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+            <li><a href="about.html" class="active"><span class="nav-icon">ℹ️</span> About</a></li>
+            <li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li>
+            <li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li>
+            <li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li>
+            <li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li>
+            <li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li>
+            <li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li>
+            <li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li>
+            <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
+        </ul>
+        <div class="mobile-nav-divider"></div>
+        <a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a>
+    </div>
 
-    <main class="container page-content">
-        <h2 class="page-title">About St. Andrew's College</h2>
-        
-        <section class="about-section">
-            <h3>Our History & Timeline</h3>
-            <p>Established over 50 years ago, St. Andrew's College has been a beacon of higher education...</p>
+    <main id="main-content">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator" aria-hidden="true">›</span>
+                    <span aria-current="page">About Us</span>
+                </nav>
+                <h1>About St. Andrew's College</h1>
+                <p>Five decades of academic excellence, innovation, and community building. Discover our journey from a small institution to a premier educational establishment.</p>
+            </div>
         </section>
 
-        <section class="about-section split-layout">
-            <div class="vision-mission">
-                <h3>Vision</h3>
-                <p>To empower students to become global leaders.</p>
-                
-                <h3>Mission</h3>
-                <p>To provide quality education that is accessible, inclusive, and transformative.</p>
-            </div>
-            <div class="principal-message">
-                <h3>Principal's Message</h3>
-                <p>"Education is the most powerful weapon which you can use to change the world. Welcome to our college."</p>
+        <!-- History -->
+        <section class="section" aria-labelledby="history-heading">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;">
+                    <div class="animate-slide-left">
+                        <h2 id="history-heading" style="margin-bottom: var(--space-6);">A Legacy of Excellence Since 1976</h2>
+                        <p style="font-size: 1.0625rem; line-height: 1.8; margin-bottom: var(--space-6);">
+                            Founded in 1976, St. Andrew's College began with a vision to provide quality education that is accessible to all. What started as a small institution with just 3 courses and 120 students has grown into a premier educational establishment offering 50+ courses to over 5,000 students.
+                        </p>
+                        <p style="font-size: 1.0625rem; line-height: 1.8; margin-bottom: var(--space-6);">
+                            Our founders believed that education should not just fill minds but transform lives. That philosophy continues to guide us today as we blend traditional academic values with modern teaching methodologies and state-of-the-art infrastructure.
+                        </p>
+                        <div style="display: flex; gap: var(--space-8);">
+                            <div>
+                                <div class="stat-number" style="color: var(--secondary); font-size: 2.5rem; letter-spacing: -0.03em;">50+</div>
+                                <div class="stat-label">Years</div>
+                            </div>
+                            <div>
+                                <div class="stat-number" style="color: var(--secondary); font-size: 2.5rem; letter-spacing: -0.03em;">50K+</div>
+                                <div class="stat-label">Alumni</div>
+                            </div>
+                            <div>
+                                <div class="stat-number" style="color: var(--secondary); font-size: 2rem; letter-spacing: -0.03em;">NAAC A</div>
+                                <div class="stat-label">Grade</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-slide-right">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&h=500&fit=crop" alt="Historic St. Andrew's College building" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);" loading="lazy">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h3>Accreditation</h3>
-            <p>We are fully accredited by the National Assessment and Accreditation Council (NAAC) with an 'A' grade.</p>
-            
-            <h3>Campus Infrastructure</h3>
-            <p>Our campus features state-of-the-art laboratories, a comprehensive library, modern sports facilities, and smart classrooms.</p>
+        <!-- Vision & Mission -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="vm-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="vm-heading">Vision & Mission</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+                    <div class="card-feature animate-slide-left" style="padding: var(--space-10);">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">🔭</div>
+                        <h3 style="margin-bottom: var(--space-4);">Our Vision</h3>
+                        <p style="font-size: 1.0625rem; line-height: 1.8;">
+                            To be a globally recognized center of academic excellence that empowers students to become innovative leaders, critical thinkers, and responsible global citizens who contribute meaningfully to society.
+                        </p>
+                    </div>
+                    <div class="card-feature animate-slide-right" style="padding: var(--space-10);">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">🎯</div>
+                        <h3 style="margin-bottom: var(--space-4);">Our Mission</h3>
+                        <p style="font-size: 1.0625rem; line-height: 1.8;">
+                            To provide accessible, inclusive, and transformative education through innovative pedagogy, industry partnerships, and holistic development. We nurture curiosity, foster research, and build character to prepare students for the challenges of tomorrow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principal's Message -->
+        <section class="section" aria-labelledby="principal-heading">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 300px 1fr; gap: var(--space-12); align-items: center;">
+                    <div class="animate-slide-left">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=350&fit=crop" alt="Principal Dr. Rajesh Kumar" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg);" loading="lazy">
+                    </div>
+                    <div class="animate-slide-right">
+                        <h2 id="principal-heading" style="margin-bottom: var(--space-6);">Principal's Message</h2>
+                        <blockquote style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); font-style: italic; border-left: 4px solid var(--primary); padding-left: var(--space-6); margin-bottom: var(--space-6);">
+                            "Education is the most powerful weapon which you can use to change the world. At St. Andrew's, we don't just teach subjects—we shape futures. Our commitment is to provide an environment where every student discovers their potential, develops critical thinking, and emerges as a confident, compassionate leader ready to make a difference."
+                        </blockquote>
+                        <div>
+                            <strong style="font-size: 1.125rem;">Dr. Rajesh Kumar</strong>
+                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9375rem;">Principal, St. Andrew's College • Ph.D. in Education, Cambridge University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="timeline-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="timeline-heading">Milestones Through the Years</h2>
+                </div>
+                <div style="position: relative; max-width: 700px; margin: 0 auto;">
+                    <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border);"></div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); margin-bottom: var(--space-8); position: relative;">
+                        <div class="timeline-marker primary">76</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6);">
+                            <h4 style="color: var(--primary); margin-bottom: var(--space-2);">1976 – Foundation</h4>
+                            <p style="margin: 0;">St. Andrew's College established with 3 courses and 120 students in a single building.</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); margin-bottom: var(--space-8); position: relative;">
+                        <div class="timeline-marker secondary">85</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6);">
+                            <h4 style="color: var(--primary); margin-bottom: var(--space-2);">1985 – Expansion</h4>
+                            <p style="margin: 0;">New campus building inaugurated. Science and Commerce departments added.</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); margin-bottom: var(--space-8); position: relative;">
+                        <div class="timeline-marker primary">95</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6);">
+                            <h4 style="color: var(--primary); margin-bottom: var(--space-2);">1995 – Digital Leap</h4>
+                            <p style="margin: 0;">Computer lab established. IT department launched. First batch of 200+ graduates.</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); margin-bottom: var(--space-8); position: relative;">
+                        <div class="timeline-marker secondary">06</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6);">
+                            <h4 style="color: var(--primary); margin-bottom: var(--space-2);">2006 – NAAC Accreditation</h4>
+                            <p style="margin: 0;">Awarded 'A' grade by NAAC. Library digitized. Sports complex inaugurated.</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); margin-bottom: var(--space-8); position: relative;">
+                        <div class="timeline-marker primary">15</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6);">
+                            <h4 style="color: var(--primary); margin-bottom: var(--space-2);">2015 – Smart Campus</h4>
+                            <p style="margin: 0;">Smart classrooms introduced. Wi-Fi campus. Student portal launched.</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; gap: var(--space-6); position: relative;">
+                        <div class="timeline-marker success">26</div>
+                        <div class="card" style="flex: 1; padding: var(--space-6); border: 2px solid var(--success);">
+                            <h4 style="color: var(--success); margin-bottom: var(--space-2);">2026 – Today</h4>
+                            <p style="margin: 0;">5,000+ students, 50+ courses, 95% placement rate, and a thriving alumni network of 50,000+.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team -->
+        <section class="section" aria-labelledby="leadership-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="leadership-heading">Leadership Team</h2>
+                    <p>Meet the dedicated leaders who guide our institution towards excellence.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">                        <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" alt="Dr. Rajesh Kumar" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h4 style="margin-bottom: var(--space-1);">Dr. Rajesh Kumar</h4>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Principal</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Ph.D. Education, Cambridge</p>
+                    </div>                        <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" alt="Dr. Priya Sharma" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h4 style="margin-bottom: var(--space-1);">Dr. Priya Sharma</h4>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Vice Principal</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">M.Phil Commerce, DU</p>
+                    </div>                        <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Prof. Amit Verma" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h4 style="margin-bottom: var(--space-1);">Prof. Amit Verma</h4>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Dean of Academics</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Ph.D. Computer Science, IIT</p>
+                    </div>                        <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face" alt="Ms. Neha Gupta" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h4 style="margin-bottom: var(--space-1);">Ms. Neha Gupta</h4>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Placement Head</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">MBA HR, XLRI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accreditation -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="accreditation-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="accreditation-heading">Accreditation & Recognition</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4);">🏅</div>
+                        <h3 style="margin-bottom: var(--space-2);">NAAC 'A' Grade</h3>
+                        <p style="margin: 0;">Accredited with 'A' grade by the National Assessment and Accreditation Council.</p>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4);">🏛️</div>
+                        <h3 style="margin-bottom: var(--space-2);">UGC Recognized</h3>
+                        <p style="margin: 0;">Recognized by University Grants Commission under Section 2(f) and 12(B).</p>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4);">🌟</div>
+                        <h3 style="margin-bottom: var(--space-2);">ISO 9001:2015</h3>
+                        <p style="margin: 0;">ISO certified for quality management in education and administration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Infrastructure -->
+        <section class="section" aria-labelledby="campus-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="campus-heading">World-Class Infrastructure</h2>
+                    <p>Our sprawling campus is designed to provide the best learning environment.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-3);">🏗️</div>
+                        <h4 style="margin-bottom: var(--space-2);">Smart Classrooms</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">50+ classrooms with projectors, smart boards, and AC.</p>
+                    </div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-3);">🔬</div>
+                        <h4 style="margin-bottom: var(--space-2);">Modern Labs</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">15+ state-of-the-art laboratories for practical learning.</p>
+                    </div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-3);">📚</div>
+                        <h4 style="margin-bottom: var(--space-2);">Digital Library</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">50,000+ books, e-journals, and digital resources.</p>
+                    </div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-3);">⚽</div>
+                        <h4 style="margin-bottom: var(--space-2);">Sports Complex</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Cricket ground, basketball court, gym, and swimming pool.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">
+                        St. Andrew's College
+                        <small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small>
+                    </div>
+                    <p>Empowering minds and shaping futures through quality education, modern infrastructure, and a commitment to holistic development.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</a>
+                        <a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</a>
+                        <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</a>
+                        <a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="placements.html">Placements</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="student-portal.html">Student Portal</a></li>
+                        <li><a href="faculty-portal.html">Faculty Portal</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="campus-life.html">Campus Life</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">📍 123 College Road, Education City</a></li>
+                        <li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li>
+                        <li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li>
+                        <li><a href="#">🕐 Mon–Fri: 9AM – 4PM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Accessibility</a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

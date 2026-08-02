@@ -3,96 +3,543 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Andrew's College | Home</title>
+    <meta name="description" content="St. Andrew's College – Empowering minds, shaping the future. Discover world-class education, modern facilities, and a vibrant campus life.">
+    <title>St. Andrew's College | Empowering Minds, Shaping the Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/darkmode.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="navbar" role="banner">
         <div class="container">
-            <h1 class="logo">St. Andrew's College</h1>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
+            <a href="index.html" class="logo" aria-label="St. Andrew's College Home">
+                <div class="logo-icon">SA</div>
+                <div class="logo-text">
+                    St. Andrew's College
+                    <small>Excellence in Education</small>
+                </div>
+            </a>
+
+            <nav class="nav-links" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="admissions.html">Admissions</a>
                 <a href="departments.html">Departments</a>
+                <a href="events.html">Events</a>
+                <a href="placements.html">Placements</a>
+                <a href="campus-life.html">Campus Life</a>
                 <a href="gallery.html">Gallery</a>
-                <a href="student-portal.html">Student Portal</a>
+                <a href="library.html">Library</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <button class="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+
+            <div class="nav-actions">
+                <button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <span class="icon-moon">🌙</span>
+                    <span class="icon-sun">☀️</span>
+                </button>
+                <a href="student-portal.html" class="nav-cta">Student Portal</a>
+                <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active"><span class="nav-icon">🏠</span> Home</a></li>
+            <li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li>
+            <li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li>
+            <li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li>
+            <li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li>
+            <li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li>
+            <li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li>
+            <li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li>
+            <li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li>
+            <li><a href="faculty-portal.html"><span class="nav-icon">👨‍🏫</span> Faculty</a></li>
+            <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
+        </ul>
+        <div class="mobile-nav-divider"></div>
+        <a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Welcome hero">
+            <div class="hero-grid-pattern" aria-hidden="true"></div>
             <div class="container">
-                <h2>Empowering Minds, Shaping the Future</h2>
-                <p>Welcome to a modern, responsive, secure, and user-friendly learning environment.</p>
-                <div class="quick-links">
-                    <a href="admissions.html" class="btn btn-primary">Admissions</a>
-                    <a href="departments.html" class="btn btn-accent">Courses</a>
-                    <a href="student-portal.html" class="btn btn-outline">Student Portal</a>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        Admissions Open for 2026–27
+                    </div>
+                    <h1>
+                        Empowering Minds,
+                        <span class="highlight">Shaping the Future</span>
+                    </h1>
+                    <p class="hero-description">
+                        Join a legacy of academic excellence spanning over 50 years. Discover world-class education, modern facilities, and a vibrant community that nurtures leaders of tomorrow.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="admissions.html" class="btn btn-secondary btn-lg">
+                            Apply Now <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="departments.html" class="btn btn-outline btn-lg">
+                            Explore Courses
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">5,000+</span>
+                            <span class="hero-stat-label">Students</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">95%</span>
+                            <span class="hero-stat-label">Placement Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop" alt="St. Andrew's College campus building with students" loading="eager">
+                    </div>
+                    <div class="hero-floating-card card-1">
+                        <div class="card-icon gold">🏆</div>
+                        <div class="card-text">
+                            <strong>NAAC 'A' Grade</strong>
+                            <span>Accredited Institution</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card card-2">
+                        <div class="card-icon blue">📊</div>
+                        <div class="card-text">
+                            <strong>95% Placement</strong>
+                            <span>2025 Batch</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="college-stats container">
-            <div class="stat-card">
-                <h3>50+</h3>
-                <p>Years of Excellence</p>
-            </div>
-            <div class="stat-card">
-                <h3>100+</h3>
-                <p>Faculty Members</p>
-            </div>
-            <div class="stat-card">
-                <h3>5000+</h3>
-                <p>Students</p>
-            </div>
-        </section>
-
-        <section class="notices-events container split-layout">
-            <div class="notices">
-                <h2>Latest Notices</h2>
-                <ul>
-                    <li>Admission open for Fall 2026</li>
-                    <li>Semester exams schedule released</li>
-                    <li>Library timings updated</li>
-                </ul>
-            </div>
-            <div class="events">
-                <h2>Upcoming Events</h2>
-                <ul>
-                    <li>Annual Cultural Fest - Aug 15</li>
-                    <li>Tech Symposium - Sep 10</li>
-                </ul>
+        <!-- Quick Stats -->
+        <section class="section-sm" aria-label="College statistics">
+            <div class="container">
+                <div class="stats-grid animate-on-scroll">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Expert Faculty</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Courses Offered</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="testimonials container">
-            <h2>Student Testimonials</h2>
-            <div class="testimonial-grid">
-                <blockquote class="card">
-                    <p>"The best learning experience of my life."</p>
-                    <cite>- Jane Doe, BSc IT</cite>
-                </blockquote>
-                <blockquote class="card">
-                    <p>"Amazing campus and supportive faculty."</p>
-                    <cite>- John Smith, BCom</cite>
-                </blockquote>
+        <!-- Featured Courses -->
+        <section class="section" aria-labelledby="courses-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="courses-heading">Featured Courses</h2>
+                    <p>Discover our diverse range of undergraduate and postgraduate programs designed to prepare you for the modern world.</p>
+                </div>
+                <div class="courses-grid stagger-children animate-on-scroll">
+                    <article class="course-card">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="BSc IT students working in computer lab" loading="lazy">
+                            <span class="course-card-badge">Popular</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>BSc Information Technology</h3>
+                            <p>Master cutting-edge technology skills with our comprehensive IT program covering programming, databases, networking, and AI.</p>
+                            <div class="course-card-meta">
+                                <span>⏱ 3 Years</span>
+                                <span>🎓 Undergraduate</span>
+                                <span>📊 120 Seats</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="BCom students in finance workshop" loading="lazy">
+                            <span class="course-card-badge">Trending</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Bachelor of Commerce</h3>
+                            <p>Build a strong foundation in accounting, economics, and finance with industry-relevant curriculum and practical exposure.</p>
+                            <div class="course-card-meta">
+                                <span>⏱ 3 Years</span>
+                                <span>🎓 Undergraduate</span>
+                                <span>📊 150 Seats</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="BA students in literature class" loading="lazy">
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Bachelor of Arts</h3>
+                            <p>Explore the world of humanities with programs in Literature, History, Psychology, and Sociology with experienced faculty.</p>
+                            <div class="course-card-meta">
+                                <span>⏱ 3 Years</span>
+                                <span>🎓 Undergraduate</span>
+                                <span>📊 100 Seats</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-8 animate-on-scroll">
+                    <a href="departments.html" class="btn btn-outline">View All Courses →</a>
+                </div>
             </div>
         </section>
+
+        <!-- Notices & Events -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="notices-events-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="notices-events-heading">Latest Notices & Events</h2>
+                    <p>Keep up with the latest announcements, events, and happenings at St. Andrew's College.</p>
+                </div>
+                <div class="notices-events-grid">
+                    <div class="card animate-slide-left">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">
+                            📢 Latest Notices
+                        </h3>
+                        <ul class="notice-list">
+                            <li class="notice-item">
+                                <div class="notice-icon">📋</div>
+                                <div>
+                                    <p>Admission Open for Fall 2026 – Apply Now</p>
+                                    <small>August 1, 2026</small>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="notice-icon">📝</div>
+                                <div>
+                                    <p>Semester Exam Schedule Released</p>
+                                    <small>July 28, 2026</small>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="notice-icon">⏰</div>
+                                <div>
+                                    <p>Library Timings Updated for Summer</p>
+                                    <small>July 20, 2026</small>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="notice-icon">🏆</div>
+                                <div>
+                                    <p>Annual Day Celebration – Save the Date</p>
+                                    <small>July 15, 2026</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card animate-slide-right">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">
+                            🎉 Upcoming Events
+                        </h3>
+                        <ul class="event-list">
+                            <li class="event-item">
+                                <div class="event-icon">🎭</div>
+                                <div>
+                                    <p>Annual Cultural Fest 2026</p>
+                                    <small>August 15, 2026 • Main Auditorium</small>
+                                </div>
+                            </li>
+                            <li class="event-item">
+                                <div class="event-icon">💻</div>
+                                <div>
+                                    <p>Tech Symposium – Future of AI</p>
+                                    <small>September 10, 2026 • CS Block</small>
+                                </div>
+                            </li>
+                            <li class="event-item">
+                                <div class="event-icon">🏆</div>
+                                <div>
+                                    <p>Inter-College Sports Tournament</p>
+                                    <small>September 20, 2026 • Sports Complex</small>
+                                </div>
+                            </li>
+                            <li class="event-item">
+                                <div class="event-icon">📚</div>
+                                <div>
+                                    <p>Guest Lecture: Industry Insights</p>
+                                    <small>October 5, 2026 • Seminar Hall</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8 animate-on-scroll">
+                    <a href="events.html" class="btn btn-ghost">View All Events →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="testimonials-heading">What Our Students Say</h2>
+                    <p>Hear from our students and alumni about their transformative experience at St. Andrew's College.</p>
+                </div>
+                <div class="testimonials-grid stagger-children animate-on-scroll">
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                        <p>"The best learning experience of my life. The faculty is incredibly supportive, and the campus facilities are world-class. I secured my dream job right after graduation."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JD</div>
+                            <div class="testimonial-info">
+                                <strong>Jane Doe</strong>
+                                <span>BSc IT • Class of 2025</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                        <p>"Amazing campus and supportive faculty. The practical exposure and industry connections helped me land a placement at a top MNC. Highly recommend St. Andrew's!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JS</div>
+                            <div class="testimonial-info">
+                                <strong>John Smith</strong>
+                                <span>BCom • Class of 2024</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                        <p>"From cultural fests to academic seminars, every day at St. Andrew's is an opportunity to grow. The college truly shaped me into a confident professional."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AP</div>
+                            <div class="testimonial-info">
+                                <strong>Anita Patel</strong>
+                                <span>BA Psychology • Class of 2025</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="why-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="why-heading">What Sets Us Apart</h2>
+                    <p>We combine academic rigor with holistic development to create leaders who make a difference.</p>
+                </div>
+                <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+                    <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-6); background: var(--card); border-radius: var(--radius-xl); border: 1px solid var(--card-border);">
+                        <div style="width: 56px; height: 56px; background: rgba(11,61,145,0.08); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🎯</div>
+                        <div>
+                            <h3 style="margin-bottom: var(--space-2); font-size: 1.125rem;">Academic Excellence</h3>
+                            <p style="margin: 0; font-size: 0.9375rem;">Rigorous curriculum designed with industry experts to ensure you're always ahead of the curve.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-6); background: var(--card); border-radius: var(--radius-xl); border: 1px solid var(--card-border);">
+                        <div style="width: 56px; height: 56px; background: rgba(212,175,55,0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🏢</div>
+                        <div>
+                            <h3 style="margin-bottom: var(--space-2); font-size: 1.125rem;">Modern Infrastructure</h3>
+                            <p style="margin: 0; font-size: 0.9375rem;">State-of-the-art labs, smart classrooms, a digital library, and sports facilities.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-6); background: var(--card); border-radius: var(--radius-xl); border: 1px solid var(--card-border);">
+                        <div style="width: 56px; height: 56px; background: rgba(34,197,94,0.08); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🤝</div>
+                        <div>
+                            <h3 style="margin-bottom: var(--space-2); font-size: 1.125rem;">Industry Connections</h3>
+                            <p style="margin: 0; font-size: 0.9375rem;">95% placement rate with partnerships with 100+ leading companies.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-6); background: var(--card); border-radius: var(--radius-xl); border: 1px solid var(--card-border);">
+                        <div style="width: 56px; height: 56px; background: rgba(59,130,246,0.08); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🌍</div>
+                        <div>
+                            <h3 style="margin-bottom: var(--space-2); font-size: 1.125rem;">Global Alumni Network</h3>
+                            <p style="margin: 0; font-size: 0.9375rem;">50,000+ alumni across 50+ countries, creating opportunities worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="faq-heading">Frequently Asked Questions</h2>
+                    <p>Find answers to the most common questions about admissions, campus life, and more.</p>
+                </div>
+                <div class="faq-list animate-on-scroll">
+                    <div class="faq-item active">
+                        <button class="faq-question" aria-expanded="true">
+                            What are the admission requirements?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer" style="max-height: 200px;">
+                            <div class="faq-answer-inner">
+                                A minimum of 50% in the qualifying examination (10+2) is required for undergraduate courses. Students must submit their marksheets, transfer certificate, photographs, and ID proof. Some courses may require an entrance test or interview.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is hostel accommodation available?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Yes, we provide separate hostel facilities for boys and girls on campus. The hostels are equipped with modern amenities including Wi-Fi, mess facilities, 24/7 security, and recreational areas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What placement opportunities are available?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Our dedicated placement cell works with 100+ companies including TCS, Infosys, Wipro, and more. We have a 95% placement rate with average packages ranging from ₹4-8 LPA for undergraduate students.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Are scholarships available?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Yes, we offer merit-based scholarships, need-based financial aid, and sports quotas. Scholarships range from 25% to 100% of tuition fees based on academic performance and financial background.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What extracurricular activities are offered?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                We offer a wide range of activities including sports, cultural clubs, NSS, NCC, tech clubs, literary societies, and annual fests. Students can join any number of clubs and participate in inter-college competitions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="section" aria-labelledby="newsletter-heading">
+            <div class="container">
+                <div class="newsletter-section animate-on-scroll">
+                    <h2 id="newsletter-heading">Stay Connected with St. Andrew's</h2>
+                    <p>Subscribe to our newsletter for the latest updates, events, and admission information.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed! ✓'; this.querySelector('input').value='';">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">
+                        St. Andrew's College
+                        <small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small>
+                    </div>
+                    <p>Empowering minds and shaping futures through quality education, modern infrastructure, and a commitment to holistic development.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+                        <a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</span></a>
+                        <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                        <a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</span></a>
+                        <a href="#" aria-label="YouTube"><span aria-hidden="true">📺</span></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="placements.html">Placements</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="student-portal.html">Student Portal</a></li>
+                        <li><a href="faculty-portal.html">Faculty Portal</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="campus-life.html">Campus Life</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><span aria-hidden="true">📍</span> 123 College Road, Education City</a></li>
+                        <li><a href="tel:+911234567890"><span aria-hidden="true">📞</span> +91 123 456 7890</a></li>
+                        <li><a href="mailto:info@standrews.edu"><span aria-hidden="true">✉️</span> info@standrews.edu</a></li>
+                        <li><a href="#"><span aria-hidden="true">🕐</span> Mon–Fri: 9AM – 4PM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Accessibility</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/scroll.js"></script>

@@ -1,103 +1,682 @@
-/* Animations requested: Fade Up, Slide Left, Slide Right, Scale on Hover, Floating Hero, Animated Counters, Scroll Progress Bar, Smooth Scroll */
-/* 60fps optimizations: GPU-accelerated transforms and opacity */
+/* ============================================================
+   Animations & Transitions
+   60fps optimized with GPU-accelerated properties
+   ============================================================ */
 
-html {
-    scroll-behavior: smooth;
+/* ---- Page Loading Screen ---- */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s var(--ease-out), visibility 0.3s;
 }
 
-/* Force GPU compositing for smoother animations */
-.fade-up,
-.slide-left,
-.slide-right,
-.scale-hover,
-.floating-hero {
+.page-loader.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loader.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out);
+}
+
+.loader-logo {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-6);
+    animation: loaderPulse 1.5s ease-in-out infinite;
+    box-shadow: 0 8px 24px rgba(11,61,145,0.3);
+}
+
+@keyframes loaderPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(11,61,145,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(11,61,145,0.4); }
+}
+
+/* ---- Logo Animation Styles ---- */
+
+/* Spin - Continuous rotation */
+.anim-spin {
+    animation: loaderSpin 1.2s linear infinite !important;
+}
+
+@keyframes loaderSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Bounce - Up and down bounce */
+.anim-bounce {
+    animation: loaderBounce 0.8s ease-in-out infinite !important;
+}
+
+@keyframes loaderBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Shake - Side to side shake */
+.anim-shake {
+    animation: loaderShake 0.5s ease-in-out infinite !important;
+}
+
+@keyframes loaderShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+/* Rubber Band - Stretch and squish */
+.anim-rubber-band {
+    animation: loaderRubberBand 1s ease-in-out infinite !important;
+}
+
+@keyframes loaderRubberBand {
+    0%, 100% { transform: scale(1, 1); }
+    30% { transform: scale(1.15, 0.85); }
+    40% { transform: scale(0.85, 1.15); }
+    50% { transform: scale(1.05, 0.95); }
+    65% { transform: scale(0.95, 1.05); }
+    75% { transform: scale(1.02, 0.98); }
+}
+
+/* Jello - Wobble effect */
+.anim-jello {
+    animation: loaderJello 1s ease-in-out infinite !important;
+}
+
+@keyframes loaderJello {
+    0%, 100% { transform: skewX(0deg) skewY(0deg); }
+    30% { transform: skewX(-12deg) skewY(-12deg); }
+    40% { transform: skewX(8deg) skewY(8deg); }
+    50% { transform: skewX(-5deg) skewY(-5deg); }
+    65% { transform: skewX(3deg) skewY(3deg); }
+    75% { transform: skewX(-2deg) skewY(-2deg); }
+}
+
+/* Flip - Horizontal flip */
+.anim-flip {
+    animation: loaderFlip 1.2s ease-in-out infinite !important;
+}
+
+@keyframes loaderFlip {
+    0% { transform: perspective(400px) rotateY(0deg); }
+    100% { transform: perspective(400px) rotateY(360deg); }
+}
+
+/* None - No animation */
+.anim-none {
+    animation: none !important;
+}
+
+/* ---- Bar Animation Styles ---- */
+
+/* Fill - Bar fills from left to right */
+.bar-fill .loader-bar-inner {
+    animation: loaderFill 1.5s ease-in-out infinite !important;
+}
+
+@keyframes loaderFill {
+    0% { width: 0%; transform: translateX(0); }
+    50% { width: 100%; transform: translateX(0); }
+    100% { width: 0%; transform: translateX(0); }
+}
+
+/* Pulse - Bar pulses opacity */
+.bar-pulse .loader-bar-inner {
+    animation: loaderBarPulse 1s ease-in-out infinite !important;
+    width: 100% !important;
+}
+
+@keyframes loaderBarPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Grow - Bar grows from center */
+.bar-grow .loader-bar-inner {
+    animation: loaderGrow 1.2s ease-in-out infinite !important;
+    margin: 0 auto;
+}
+
+@keyframes loaderGrow {
+    0%, 100% { width: 20%; transform: translateX(0); }
+    50% { width: 100%; transform: translateX(0); }
+}
+
+/* None - No bar animation */
+.bar-none .loader-bar-inner {
+    animation: none !important;
+    width: 100% !important;
+}
+
+.loader-bar {
+    width: 120px;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: var(--space-4);
+}
+
+.loader-bar-inner {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+    animation: loaderSlide 1.2s ease-in-out infinite;
+}
+
+@keyframes loaderSlide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(350%); }
+}
+
+.loader-text {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Page transition overlay */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: var(--primary);
+    z-index: 9998;
+    transform: scaleX(0);
+    transform-origin: left;
+    pointer-events: none;
+}
+
+.page-transition.transitioning {
+    animation: pageTransitionIn 0.5s var(--ease-out) forwards;
+}
+
+.page-transition.transitioning-out {
+    animation: pageTransitionOut 0.5s var(--ease-out) forwards;
+}
+
+@keyframes pageTransitionIn {
+    0% { transform: scaleX(0); transform-origin: left; }
+    50% { transform: scaleX(1); transform-origin: left; }
+    50.01% { transform-origin: right; }
+    100% { transform: scaleX(0); transform-origin: right; }
+}
+
+@keyframes pageTransitionOut {
+    0% { transform: scaleX(1); transform-origin: right; }
+    100% { transform: scaleX(0); transform-origin: right; }
+}
+
+/* Body transition states */
+body.page-entering {
+    overflow: hidden;
+}
+
+body.page-entering main {
+    animation: pageEnter 0.6s var(--ease-out) 0.3s both;
+}
+
+@keyframes pageEnter {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Page-Specific Loader Variations ---- */
+
+/* Home Page - Default Navy */
+.page-loader[data-page="home"] .loader-logo {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+}
+
+/* About Page - Gold Accent */
+.page-loader[data-page="about"] .loader-logo {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    animation: loaderPulseGold 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseGold {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(212,175,55,0.4); }
+}
+
+/* Admissions Page - Success Green */
+.page-loader[data-page="admissions"] .loader-logo {
+    background: linear-gradient(135deg, var(--success), #34d399);
+    animation: loaderPulseGreen 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseGreen {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(34,197,94,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(34,197,94,0.4); }
+}
+
+/* Departments Page - Primary Light */
+.page-loader[data-page="departments"] .loader-logo {
+    background: linear-gradient(135deg, #3B82F6, #60A5FA);
+    animation: loaderPulseBlue 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseBlue {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(59,130,246,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(59,130,246,0.4); }
+}
+
+/* Events Page - Warning Orange */
+.page-loader[data-page="events"] .loader-logo {
+    background: linear-gradient(135deg, var(--warning), #FBBF24);
+    animation: loaderPulseOrange 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseOrange {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(245,158,11,0.4); }
+}
+
+/* Placements Page - Primary Dark */
+.page-loader[data-page="placements"] .loader-logo {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    animation: loaderPulseDark 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseDark {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(8,45,110,0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(8,45,110,0.5); }
+}
+
+/* Campus Life - Rose Pink */
+.page-loader[data-page="campus-life"] .loader-logo {
+    background: linear-gradient(135deg, #F43F5E, #FB7185);
+    animation: loaderPulseRose 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseRose {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(244,63,94,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(244,63,94,0.4); }
+}
+
+/* Gallery Page - Purple */
+.page-loader[data-page="gallery"] .loader-logo {
+    background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+    animation: loaderPulsePurple 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulsePurple {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(139,92,246,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(139,92,246,0.4); }
+}
+
+/* Library Page - Teal */
+.page-loader[data-page="library"] .loader-logo {
+    background: linear-gradient(135deg, #14B8A6, #2DD4BF);
+    animation: loaderPulseTeal 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseTeal {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(20,184,166,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(20,184,166,0.4); }
+}
+
+/* Contact Page - Indigo */
+.page-loader[data-page="contact"] .loader-logo {
+    background: linear-gradient(135deg, #6366F1, #818CF8);
+    animation: loaderPulseIndigo 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseIndigo {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(99,102,241,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(99,102,241,0.4); }
+}
+
+/* Student Portal - Navy Gradient */
+.page-loader[data-page="student-portal"] .loader-logo {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    animation: loaderPulsePortal 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulsePortal {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(11,61,145,0.4); }
+    50% { transform: scale(1.08); box-shadow: 0 16px 40px rgba(11,61,145,0.5); }
+}
+
+/* Faculty Portal - Slate */
+.page-loader[data-page="faculty-portal"] .loader-logo {
+    background: linear-gradient(135deg, #475569, #64748B);
+    animation: loaderPulseSlate 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulseSlate {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(71,85,105,0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(71,85,105,0.4); }
+}
+
+/* Page-specific loader icons */
+.page-loader[data-page="home"] .loader-logo::after { content: '🏠'; }
+.page-loader[data-page="about"] .loader-logo::after { content: '🏛️'; }
+.page-loader[data-page="admissions"] .loader-logo::after { content: '📝'; }
+.page-loader[data-page="departments"] .loader-logo::after { content: '📚'; }
+.page-loader[data-page="events"] .loader-logo::after { content: '🎉'; }
+.page-loader[data-page="placements"] .loader-logo::after { content: '💼'; }
+.page-loader[data-page="campus-life"] .loader-logo::after { content: '🏫'; }
+.page-loader[data-page="gallery"] .loader-logo::after { content: '📷'; }
+.page-loader[data-page="library"] .loader-logo::after { content: '📖'; }
+.page-loader[data-page="contact"] .loader-logo::after { content: '📞'; }
+.page-loader[data-page="student-portal"] .loader-logo::after { content: '🎓'; }
+.page-loader[data-page="faculty-portal"] .loader-logo::after { content: '👨‍🏫'; }
+
+/* Hide text when icon is shown */
+.page-loader[data-page] .loader-logo-text {
+    display: none;
+}
+
+.page-loader[data-page] .loader-logo::after {
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+/* Page-specific loader text */
+.page-loader[data-page="home"] .loader-text::after { content: 'Welcome to St. Andrew\'s'; }
+.page-loader[data-page="about"] .loader-text::after { content: 'Discovering our story'; }
+.page-loader[data-page="admissions"] .loader-text::after { content: 'Starting your journey'; }
+.page-loader[data-page="departments"] .loader-text::after { content: 'Exploring programs'; }
+.page-loader[data-page="events"] .loader-text::after { content: 'Finding events'; }
+.page-loader[data-page="placements"] .loader-text::after { content: 'Loading opportunities'; }
+.page-loader[data-page="campus-life"] .loader-text::after { content: 'Exploring campus'; }
+.page-loader[data-page="gallery"] .loader-text::after { content: 'Loading gallery'; }
+.page-loader[data-page="library"] .loader-text::after { content: 'Accessing library'; }
+.page-loader[data-page="contact"] .loader-text::after { content: 'Connecting you'; }
+.page-loader[data-page="student-portal"] .loader-text::after { content: 'Loading dashboard'; }
+.page-loader[data-page="faculty-portal"] .loader-text::after { content: 'Loading portal'; }
+
+/* Hide default text when page-specific text is shown */
+.page-loader[data-page] .loader-text {
+    font-size: 0;
+}
+
+.page-loader[data-page] .loader-text::after {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Page-specific bar colors */
+.page-loader[data-page="about"] .loader-bar-inner { background: linear-gradient(90deg, var(--secondary), var(--primary)); }
+.page-loader[data-page="admissions"] .loader-bar-inner { background: linear-gradient(90deg, var(--success), #34d399); }
+.page-loader[data-page="departments"] .loader-bar-inner { background: linear-gradient(90deg, #3B82F6, #60A5FA); }
+.page-loader[data-page="events"] .loader-bar-inner { background: linear-gradient(90deg, var(--warning), #FBBF24); }
+.page-loader[data-page="placements"] .loader-bar-inner { background: linear-gradient(90deg, var(--primary-dark), var(--primary)); }
+.page-loader[data-page="campus-life"] .loader-bar-inner { background: linear-gradient(90deg, #F43F5E, #FB7185); }
+.page-loader[data-page="gallery"] .loader-bar-inner { background: linear-gradient(90deg, #8B5CF6, #A78BFA); }
+.page-loader[data-page="library"] .loader-bar-inner { background: linear-gradient(90deg, #14B8A6, #2DD4BF); }
+.page-loader[data-page="contact"] .loader-bar-inner { background: linear-gradient(90deg, #6366F1, #818CF8); }
+.page-loader[data-page="student-portal"] .loader-bar-inner { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.page-loader[data-page="faculty-portal"] .loader-bar-inner { background: linear-gradient(90deg, #475569, #64748B); }
+
+/* Reduced motion for loader */
+@media (prefers-reduced-motion: reduce) {
+    .page-loader {
+        transition: none;
+    }
+    .page-loader.active {
+        opacity: 1;
+    }
+    .loader-logo {
+        animation: none;
+    }
+    .loader-bar-inner {
+        animation: none;
+        width: 100%;
+    }
+    .page-transition {
+        display: none;
+    }
+    body.page-entering main {
+        animation: none;
+    }
+}
+
+/* Force GPU compositing */
+.animate-on-scroll,
+.animate-slide-left,
+.animate-slide-right,
+.animate-scale {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform, opacity;
 }
 
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Hero entrance animations */
+.hero-content {
+    animation: fadeInUp 0.8s var(--ease-out) both;
 }
 
-.fade-up.visible {
+.hero-visual {
+    animation: fadeInUp 0.8s var(--ease-out) 0.2s both;
+}
+
+.hero-badge {
+    animation: fadeInUp 0.6s var(--ease-out) 0.1s both;
+}
+
+/* Counter animation */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.counter-animated {
+    animation: countUp 0.5s var(--ease-out) both;
+}
+
+/* Card hover micro-interactions */
+.card,
+.course-card,
+.testimonial-card,
+.faq-item {
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
+}
+
+/* Button ripple effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    pointer-events: none;
+}
+
+.btn:active::after {
+    transform: scale(2.5);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Image hover zoom */
+.course-card-image img,
+.gallery-item img {
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+/* Smooth page transitions */
+.page-content {
+    animation: fadeIn 0.4s var(--ease-out);
+}
+
+/* Skeleton loading */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg,
+        var(--bg-subtle) 25%,
+        var(--border-light) 50%,
+        var(--bg-subtle) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--radius-md);
+}
+
+/* Toast notification slide */
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutToRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0;
+}
+
+.toast-enter {
+    animation: slideInFromRight 0.4s var(--ease-spring) both;
+}
+
+.toast-exit {
+    animation: slideOutToRight 0.3s var(--ease-out) both;
+}
+
+/* Parallax subtle effect */
+@media (prefers-reduced-motion: no-preference) {
+    .parallax-slow {
+        transition: transform 0.1s linear;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animate-on-scroll,
+    .animate-slide-left,
+    .animate-slide-right,
+    .animate-scale {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-floating-card {
+        animation: none;
+    }
+
+    .stagger-children > * {
+        opacity: 1;
+        transform: none;
+    }
+
+    .course-card:hover,
+    .card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Scroll-triggered stagger children */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; }
+
+.stagger-children.visible > * {
     opacity: 1;
     transform: translateY(0);
 }
 
-.slide-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* ---- Distinctive Hover Effects ---- */
+.card:hover {
+    transform: translateY(-6px) scale(1.01);
 }
 
-.slide-left.visible {
-    opacity: 1;
-    transform: translateX(0);
+.course-card:hover {
+    transform: translateY(-8px);
 }
 
-.slide-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
 }
 
-.slide-right.visible {
-    opacity: 1;
-    transform: translateX(0);
+.btn-secondary:hover {
+    transform: translateY(-3px) scale(1.02);
 }
 
-.scale-hover {
-    transition: transform 0.3s ease;
+/* Gold accent glow on hover */
+.hero-stat:hover .hero-stat-number {
+    text-shadow: 0 0 20px rgba(212,175,55,0.5);
 }
 
-.scale-hover:hover {
+/* Smooth scale on focus */
+.btn:focus-visible {
     transform: scale(1.05);
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+/* Nav link underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width var(--duration-normal) var(--ease-out), left var(--duration-normal) var(--ease-out);
 }
 
-.floating-hero {
-    animation: float 4s ease-in-out infinite;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 60%;
+    left: 20%;
 }
 
-#scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: var(--accent);
-    width: 0%;
-    z-index: 2000;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-/* Navbar sticky positioning for smooth scrolling */
-.navbar {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-/* Lightbox transitions */
-.lightbox {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.lightbox img {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-/* Gallery item hover optimization */
-.gallery-item img {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+/* Footer social icon lift */
+.footer-social a:hover {
+    transform: translateY(-3px) scale(1.1);
 }

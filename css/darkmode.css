@@ -1,20 +1,105 @@
-body.dark-mode {
-    --bg-color: #111827;
-    --card-bg: #1F2937;
-    --text-main: #F9FAFB;
-}
+/* ============================================================
+   Dark Mode Styles
+   ============================================================ */
 
+/* Dark mode toggle button */
 .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 0.5rem;
+    border: none;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    border-radius: 4px;
-    margin-left: 1rem;
-    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    transition: all var(--duration-fast);
+    position: relative;
 }
 
 .dark-mode-toggle:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(11,61,145,0.08);
+    color: var(--primary);
+}
+
+.navbar:not(.scrolled) .dark-mode-toggle {
+    color: rgba(255,255,255,0.85);
+}
+
+.navbar:not(.scrolled) .dark-mode-toggle:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* Sun/Moon icon transitions */
+.dark-mode-toggle .icon-sun,
+.dark-mode-toggle .icon-moon {
+    transition: all var(--duration-normal) var(--ease-out);
+    position: absolute;
+}
+
+.dark-mode-toggle .icon-sun {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+.dark-mode-toggle .icon-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+body.dark-mode .dark-mode-toggle .icon-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+body.dark-mode .dark-mode-toggle .icon-moon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+/* Dark mode specific overrides */
+body.dark-mode .course-card { background: var(--card); }
+body.dark-mode .testimonial-card { background: var(--card); }
+body.dark-mode .faq-item { background: var(--card); }
+body.dark-mode .notice-item,
+body.dark-mode .event-item { background: var(--bg-subtle); }
+
+body.dark-mode .hero-floating-card {
+    background: rgba(31,41,55,0.95);
+    color: var(--text);
+}
+
+body.dark-mode .hero-floating-card .card-text strong { color: var(--text); }
+body.dark-mode .hero-floating-card .card-text span { color: var(--text-muted); }
+
+body.dark-mode .newsletter-form input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .form-input,
+body.dark-mode .form-textarea,
+body.dark-mode .form-select {
+    background: var(--bg-subtle);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+body.dark-mode ::selection {
+    background: rgba(212,175,55,0.2);
+}
+
+/* Smooth transition for dark mode */
+body,
+body.dark-mode .navbar.scrolled,
+body.dark-mode .card,
+body.dark-mode .faq-item,
+body.dark-mode .notice-item,
+body.dark-mode .event-item {
+    transition: background-color var(--duration-normal) var(--ease-out),
+                color var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
 }

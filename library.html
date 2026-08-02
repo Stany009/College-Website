@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Digital Library at St. Andrew's College – 50,000+ books, e-journals, and online resources.">
+    <title>Library | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner"><div class="container"><a href="index.html" class="logo" aria-label="Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html">Departments</a><a href="events.html">Events</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html" class="active">Library</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html" class="active"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Library</span></nav>
+                <h1>Digital Library</h1>
+                <p>Access 50,000+ books, e-journals, and digital resources in our state-of-the-art library.</p>
+            </div>
+        </section>
+
+        <!-- Library Stats -->
+        <section class="section stat-glow" aria-labelledby="stats-heading">
+            <div class="container">
+                <div class="stats-grid animate-on-scroll">
+                    <div class="stat-item"><div class="stat-number" style="color: var(--secondary);">50K+</div><div class="stat-label">Books</div></div>
+                    <div class="stat-item"><div class="stat-number" style="color: var(--secondary);">200+</div><div class="stat-label">E-Journals</div></div>
+                    <div class="stat-item"><div class="stat-number" style="color: var(--secondary);">5K+</div><div class="stat-label">Digital Resources</div></div>
+                    <div class="stat-item"><div class="stat-number" style="color: var(--secondary);">200</div><div class="stat-label">Reading Seats</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Search -->
+        <section class="section" aria-labelledby="search-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="search-heading">Find a Book</h2></div>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <div style="position: relative;" class="animate-on-scroll">
+                        <input type="text" class="form-input" placeholder="Search by title, author, or ISBN..." style="padding-left: 3rem; padding: var(--space-4) var(--space-4) var(--space-4) 3rem; border-radius: var(--radius-full); font-size: 1rem; box-shadow: var(--shadow-md);">
+                        <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.125rem; color: var(--text-muted);">🔍</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="new-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="new-heading">New Arrivals</h2></div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);">
+                        <div style="height: 120px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: var(--space-4);">📖</div>
+                        <h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">Clean Code</h4>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-2);">Robert C. Martin</p>
+                        <span class="badge badge-success">Available</span>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);">
+                        <div style="height: 120px; background: linear-gradient(135deg, var(--secondary), var(--secondary-light)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: var(--space-4);">📖</div>
+                        <h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">AI: A Modern Approach</h4>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-2);">Stuart Russell</p>
+                        <span class="badge badge-success">Available</span>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);">
+                        <div style="height: 120px; background: linear-gradient(135deg, var(--success), #34d399); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: var(--space-4);">📖</div>
+                        <h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">Database System Concepts</h4>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-2);">Silberschatz et al.</p>
+                        <span class="badge badge-warning">Issued</span>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);">
+                        <div style="height: 120px; background: linear-gradient(135deg, var(--info), #60a5fa); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: var(--space-4);">📖</div>
+                        <h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">The Pragmatic Programmer</h4>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-2);">Hunt & Thomas</p>
+                        <span class="badge badge-success">Available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Library & Rules -->
+        <section class="section" aria-labelledby="digital-heading">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+                    <div class="card animate-slide-left" style="padding: var(--space-8);">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">💻 Digital Library</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+                            <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span>📗</span> <span>NPTEL Video Lectures</span></li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span>📘</span> <span>IEEE & ACM Digital Library</span></li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span>📙</span> <span>JSTOR Access</span></li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span>📕</span> <span>Shodhganga Research</span></li>
+                        </ul>
+                    </div>
+                    <div class="card animate-slide-right" style="padding: var(--space-8);">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">📜 Library Rules</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span style="color: var(--primary); font-weight: 700;">01</span> <span>Maximum 3 books can be issued at a time</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span style="color: var(--primary); font-weight: 700;">02</span> <span>Books must be returned within 14 days</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span style="color: var(--primary); font-weight: 700;">03</span> <span>Late fine of ₹2/day per book</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span style="color: var(--primary); font-weight: 700;">04</span> <span>Maintain silence in reading areas</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);"><span style="color: var(--primary); font-weight: 700;">05</span> <span>ID card must be shown at entry</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timings -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="timings-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="timings-heading">Library Timings</h2></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); max-width: 700px; margin: 0 auto;">
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><h4 style="margin-bottom: var(--space-2);">Monday – Friday</h4><p style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin: 0;">8:00 AM – 6:00 PM</p></div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><h4 style="margin-bottom: var(--space-2);">Saturday</h4><p style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin: 0;">9:00 AM – 2:00 PM</p></div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><h4 style="margin-bottom: var(--space-2);">Sunday</h4><p style="font-size: 1.25rem; font-weight: 700; color: var(--error); margin: 0;">Closed</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures.</p><div class="footer-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">📷</a><a href="#">💼</a></div></div><div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div><div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 St. Andrew's College.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a></div></div></div></footer>
+    <script src="js/script.js"></script><script src="js/darkmode.js"></script><script src="js/scroll.js"></script>
+</body>
+</html>

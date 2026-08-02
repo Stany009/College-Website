@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Campus life at St. Andrew's College – Clubs, sports, cultural activities, and student achievements.">
+    <title>Campus Life | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner"><div class="container"><a href="index.html" class="logo" aria-label="Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html">Departments</a><a href="events.html">Events</a><a href="placements.html">Placements</a><a href="campus-life.html" class="active">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html">Library</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html" class="active"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Campus Life</span></nav>
+                <h1>Campus Life</h1>
+                <p>Experience a vibrant campus with clubs, sports, cultural activities, and unforgettable memories.</p>
+            </div>
+        </section>
+
+        <!-- Clubs -->
+        <section class="section" aria-labelledby="clubs-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="clubs-heading">Student Clubs & Organizations</h2><p>Join a club that matches your passion and develop skills beyond the classroom.</p></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">💻</div>
+                        <h3 style="margin-bottom: var(--space-2);">Tech Club</h3>
+                        <p style="font-size: 0.875rem;">Coding competitions, hackathons, workshops, and tech talks.</p>
+                        <span class="badge badge-primary" style="margin-top: var(--space-3);">80+ Members</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">🎭</div>
+                        <h3 style="margin-bottom: var(--space-2);">Drama Club</h3>
+                        <p style="font-size: 0.875rem;">Theater productions, street plays, and monologue competitions.</p>
+                        <span class="badge badge-secondary" style="margin-top: var(--space-3);">60+ Members</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">🎵</div>
+                        <h3 style="margin-bottom: var(--space-2);">Music Club</h3>
+                        <p style="font-size: 0.875rem;">Band performances, music production, and jam sessions.</p>
+                        <span class="badge badge-success" style="margin-top: var(--space-3);">50+ Members</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">📸</div>
+                        <h3 style="margin-bottom: var(--space-2);">Photography Club</h3>
+                        <p style="font-size: 0.875rem;">Photo walks, exhibitions, and documentary projects.</p>
+                        <span class="badge badge-primary" style="margin-top: var(--space-3);">40+ Members</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">📚</div>
+                        <h3 style="margin-bottom: var(--space-2);">Literary Society</h3>
+                        <p style="font-size: 0.875rem;">Debates, creative writing, poetry slams, and book clubs.</p>
+                        <span class="badge badge-warning" style="margin-top: var(--space-3);">45+ Members</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8); text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--space-4);">🤝</div>
+                        <h3 style="margin-bottom: var(--space-2);">NSS Unit</h3>
+                        <p style="font-size: 0.875rem;">Community service, blood donation camps, and social initiatives.</p>
+                        <span class="badge badge-error" style="margin-top: var(--space-3);">100+ Volunteers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="sports-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="sports-heading">Sports Facilities</h2></div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><div style="font-size: 2rem; margin-bottom: var(--space-3);">🏏</div><h4 style="margin-bottom: var(--space-1);">Cricket</h4><p style="font-size: 0.8125rem; margin: 0; color: var(--text-muted);">Full-size ground</p></div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><div style="font-size: 2rem; margin-bottom: var(--space-3);">⚽</div><h4 style="margin-bottom: var(--space-1);">Football</h4><p style="font-size: 0.8125rem; margin: 0; color: var(--text-muted);">FIFA-standard turf</p></div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><div style="font-size: 2rem; margin-bottom: var(--space-3);">🏀</div><h4 style="margin-bottom: var(--space-1);">Basketball</h4><p style="font-size: 0.8125rem; margin: 0; color: var(--text-muted);">Indoor court</p></div>
+                    <div class="card animate-on-scroll" style="text-align: center; padding: var(--space-6);"><div style="font-size: 2rem; margin-bottom: var(--space-3);">🏋️</div><h4 style="margin-bottom: var(--space-1);">Gymnasium</h4><p style="font-size: 0.8125rem; margin: 0; color: var(--text-muted);">Fully equipped</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Activities -->
+        <section class="section" aria-labelledby="cultural-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="cultural-heading">Cultural Activities</h2></div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+                    <div class="card animate-slide-left" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">🎭</div>
+                        <h3 style="margin-bottom: var(--space-3);">Annual Cultural Fest</h3>
+                        <p>The biggest celebration of the year featuring three days of music, dance, drama, and art competitions.</p>
+                    </div>
+                    <div class="card animate-slide-right" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">🎨</div>
+                        <h3 style="margin-bottom: var(--space-3);">Art & Design Exhibition</h3>
+                        <p>Annual showcase of student artwork, photography, and design projects open to the public.</p>
+                    </div>
+                    <div class="card animate-slide-left" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">💃</div>
+                        <h3 style="margin-bottom: var(--space-3);">Dance Competitions</h3>
+                        <p>Classical, contemporary, and folk dance competitions at inter-college and national levels.</p>
+                    </div>
+                    <div class="card animate-slide-right" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">🏆</div>
+                        <h3 style="margin-bottom: var(--space-3);">Student Council</h3>
+                        <p>Democratic student governance with elected representatives organizing events and voicing concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="achievements-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="achievements-heading">Student Achievements</h2></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div class="card achievement-card gold animate-on-scroll" style="padding: var(--space-6);">
+                        <h4 style="margin-bottom: var(--space-2);">🏆 National Hackathon Winners</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Team "CodeBreakers" won first place at Smart India Hackathon 2025.</p>
+                    </div>
+                    <div class="card achievement-card blue animate-on-scroll" style="padding: var(--space-6);">
+                        <h4 style="margin-bottom: var(--space-2);">🥇 State-Level Cricket Champions</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Our cricket team won the state inter-college tournament for the third consecutive year.</p>
+                    </div>
+                    <div class="card achievement-card green animate-on-scroll" style="padding: var(--space-6);">
+                        <h4 style="margin-bottom: var(--space-2);">🎭 National Drama Festival</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Drama club performed at the National Theatre Festival in Mumbai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures.</p><div class="footer-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">📷</a><a href="#">💼</a></div></div><div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div><div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 St. Andrew's College.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a></div></div></div></footer>
+    <script src="js/script.js"></script><script src="js/darkmode.js"></script><script src="js/scroll.js"></script>
+</body>
+</html>

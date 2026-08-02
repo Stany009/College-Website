@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Faculty Portal – Access faculty profiles, research publications, and office hours.">
+    <title>Faculty Portal | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner"><div class="container"><a href="index.html" class="logo" aria-label="Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html">Departments</a><a href="events.html">Events</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html">Library</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Faculty Portal</span></nav>
+                <h1>Faculty Portal</h1>
+                <p>Meet our distinguished faculty members – educators, researchers, and industry experts.</p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="faculty-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="faculty-heading">Meet Our Faculty</h2><p>Our faculty combines academic expertise with industry experience to deliver world-class education.</p></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <!-- Faculty Member 1 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" alt="Prof. Alan Turing" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Prof. Alan Turing</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of IT Department</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">Ph.D. Computer Science, MIT</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Mon, Wed 2-4 PM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> a.turing@standrews.edu</div>
+                        </div>
+                    </div>
+                    <!-- Faculty Member 2 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" alt="Dr. Grace Hopper" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Dr. Grace Hopper</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of CS Department</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">Ph.D. Computer Science, Stanford</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Tue, Thu 10 AM-12 PM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> g.hopper@standrews.edu</div>
+                        </div>
+                    </div>
+                    <!-- Faculty Member 3 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Dr. Adam Smith" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Dr. Adam Smith</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of Commerce Dept.</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">Ph.D. Economics, LSE</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Mon-Fri 9-10 AM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> a.smith@standrews.edu</div>
+                        </div>
+                    </div>
+                    <!-- Faculty Member 4 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face" alt="Dr. Jane Austen" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Dr. Jane Austen</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of Arts Department</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">Ph.D. Literature, Oxford</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Wed, Fri 1-3 PM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> j.austen@standrews.edu</div>
+                        </div>
+                    </div>
+                    <!-- Faculty Member 5 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Prof. Peter Drucker" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Prof. Peter Drucker</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of Management Dept.</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">MBA, Harvard Business School</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Tue, Thu 3-5 PM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> p.drucker@standrews.edu</div>
+                        </div>
+                    </div>
+                    <!-- Faculty Member 6 -->
+                    <div class="card leadership-card animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" alt="Dr. Sigmund Freud" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-4); box-shadow: var(--shadow-md);" loading="lazy">
+                        <h3 style="margin-bottom: var(--space-1);">Dr. Sigmund Freud</h3>
+                        <p style="color: var(--primary); font-size: 0.875rem; margin-bottom: var(--space-2);">Head of Psychology Dept.</p>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">Ph.D. Psychology, Vienna</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2); text-align: left; font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>🕐</span> Office Hours: Mon, Wed 11 AM-1 PM</div>
+                            <div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); background: var(--bg-subtle); border-radius: var(--radius-sm);"><span>📧</span> s.freud@standrews.edu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Publications -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="research-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll"><h2 id="research-heading">Recent Publications</h2></div>
+                <div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 800px; margin: 0 auto;">
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);"><div style="display: flex; gap: var(--space-4);"><div style="width: 48px; height: 48px; background: rgba(11,61,145,0.08); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📄</div><div><h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">"AI-Driven Healthcare: A Systematic Review"</h4><p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Prof. A. Turing • IEEE Journal, 2026</p></div></div></div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);"><div style="display: flex; gap: var(--space-4);"><div style="width: 48px; height: 48px; background: rgba(212,175,55,0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📄</div><div><h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">"Sustainable Commerce in Digital Age"</h4><p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Dr. A. Smith • Journal of Economics, 2025</p></div></div></div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-5);"><div style="display: flex; gap: var(--space-4);"><div style="width: 48px; height: 48px; background: rgba(34,197,94,0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📄</div><div><h4 style="font-size: 0.9375rem; margin-bottom: var(--space-1);">"Cognitive Behavioral Therapy in Youth"</h4><p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Dr. S. Freud • Psychology Today, 2026</p></div></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures.</p><div class="footer-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">📷</a><a href="#">💼</a></div></div><div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div><div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 St. Andrew's College.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a></div></div></div></footer>
+    <script src="js/script.js"></script><script src="js/darkmode.js"></script><script src="js/scroll.js"></script>
+</body>
+</html>

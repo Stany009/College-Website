@@ -3,92 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Andrew's College | Contact</title>
+    <meta name="description" content="Contact St. Andrew's College – Get in touch with us via phone, email, or visit our campus.">
+    <title>Contact Us | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/darkmode.css">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner">
         <div class="container">
-            <h1 class="logo">St. Andrew's College</h1>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="departments.html">Departments</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="student-portal.html">Student Portal</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button class="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+            <a href="index.html" class="logo" aria-label="St. Andrew's College Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a>
+            <nav class="nav-links" role="navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html">Departments</a><a href="events.html">Events</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html">Library</a><a href="contact.html" class="active">Contact</a></nav>
+            <div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
         </div>
     </header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html" class="active"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
 
-    <main class="container page-content">
-        <h2 class="page-title">Contact Us</h2>
-        
-        <div class="contact-layout">
-            <div class="contact-form-container">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-                        <div class="error-msg" id="nameError">Name is required</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                        <div class="error-msg" id="emailError">Valid email is required</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" required>
-                        <div class="error-msg" id="phoneError">Valid phone number is required</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4" required></textarea>
-                        <div class="error-msg" id="messageError">Message is required</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Contact</span></nav>
+                <h1>Get in Touch</h1>
+                <p>Have questions? We'd love to hear from you. Reach out to us through any of the channels below.</p>
             </div>
-            <div class="contact-info">
-                <div class="card">
-                    <h3>Address</h3>
-                    <p>123 College Road, Education City, State 400001</p>
-                    
-                    <h3 class="section-heading">Office Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 4:00 PM</p>
-                    
-                    <h3 class="section-heading">Social Media</h3>
-                    <p>
-                        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-                    </p>
+        </section>
+
+        <section class="section" aria-label="Contact information and form">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-10);">
+                    <!-- Contact Form -->
+                    <div class="card-feature animate-slide-left" style="padding: var(--space-10);">
+                        <h3 style="margin-bottom: var(--space-2);">Send us a Message</h3>
+                        <p style="margin-bottom: var(--space-6);">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                                    <div class="form-error" id="nameError">Name is required</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                                    <div class="form-error" id="emailError">Valid email is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="+91 123 456 7890" required>
+                                <div class="form-error" id="phoneError">Valid phone number is required</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select id="subject" class="form-input form-select">
+                                    <option value="">Select a subject</option>
+                                    <option>Admission Inquiry</option>
+                                    <option>Fee Structure</option>
+                                    <option>Course Information</option>
+                                    <option>Placement Query</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" class="form-textarea" rows="4" placeholder="Write your message here..." required></textarea>
+                                <div class="form-error" id="messageError">Message is required</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message →</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="animate-slide-right" style="display: flex; flex-direction: column; gap: var(--space-6);">
+                        <div class="card" style="padding: var(--space-6);">
+                            <h4 style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">📍 Visit Us</h4>
+                            <p style="margin: 0;">123 College Road,<br>Education City, State 400001<br>India</p>
+                        </div>
+                        <div class="card" style="padding: var(--space-6);">
+                            <h4 style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">🕐 Office Hours</h4>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+                                <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Monday – Friday</span><strong>9:00 AM – 4:00 PM</strong></div>
+                                <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Saturday</span><strong>9:00 AM – 1:00 PM</strong></div>
+                                <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Sunday</span><strong style="color: var(--error);">Closed</strong></div>
+                            </div>
+                        </div>
+                        <div class="card" style="padding: var(--space-6);">
+                            <h4 style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">📞 Reach Out</h4>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                                <a href="tel:+911234567890" style="display: flex; align-items: center; gap: var(--space-2); color: var(--text-secondary);">📱 +91 123 456 7890</a>
+                                <a href="mailto:info@standrews.edu" style="display: flex; align-items: center; gap: var(--space-2); color: var(--text-secondary);">✉️ info@standrews.edu</a>
+                                <a href="mailto:admissions@standrews.edu" style="display: flex; align-items: center; gap: var(--space-2); color: var(--text-secondary);">📝 admissions@standrews.edu</a>
+                            </div>
+                        </div>
+                        <div class="card" style="padding: var(--space-6); border: 2px solid var(--error); background: var(--error-bg);">
+                            <h4 style="margin-bottom: var(--space-3); color: var(--error); display: flex; align-items: center; gap: var(--space-2);">🚨 Emergency Contacts</h4>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 0.875rem;">
+                                <a href="tel:+911234567899" style="color: var(--text-secondary);">Campus Security: +91 123 456 7899</a>
+                                <a href="tel:100" style="color: var(--text-secondary);">Police: 100</a>
+                                <a href="tel:108" style="color: var(--text-secondary);">Ambulance: 108</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="card animate-on-scroll" style="margin-top: var(--space-10); padding: 0; overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe82!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="St. Andrew's College Location"></iframe>
+                </div>
+
+                <!-- Department Contacts -->
+                <div style="margin-top: var(--space-10);">
+                    <h3 class="text-center animate-on-scroll" style="margin-bottom: var(--space-8);">Department Contacts</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">📚 Admission Office</h4><p style="margin: 0; font-size: 0.875rem;">admissions@standrews.edu<br>+91 123 456 7891</p></div>
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">💼 Placement Cell</h4><p style="margin: 0; font-size: 0.875rem;">placement@standrews.edu<br>+91 123 456 7892</p></div>
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">📚 Library</h4><p style="margin: 0; font-size: 0.875rem;">library@standrews.edu<br>+91 123 456 7893</p></div>
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">💰 Accounts</h4><p style="margin: 0; font-size: 0.875rem;">accounts@standrews.edu<br>+91 123 456 7894</p></div>
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">🔬 IT Department</h4><p style="margin: 0; font-size: 0.875rem;">it@standrews.edu<br>+91 123 456 7895</p></div>
+                        <div class="card animate-on-scroll" style="padding: var(--space-5);"><h4 style="font-size: 1rem; margin-bottom: var(--space-2);">🏫 Admin Office</h4><p style="margin: 0; font-size: 0.875rem;">admin@standrews.edu<br>+91 123 456 7896</p></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="map-container">
-            <!-- Simulated Google Map for demo -->
-            <p>[ Google Map Embed Here ]</p>
+        <!-- Success Popup -->
+        <div class="success-popup" id="successPopup" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2000; display: none; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+            <div style="background: var(--card); padding: var(--space-10); border-radius: var(--radius-2xl); box-shadow: var(--shadow-2xl); text-align: center; max-width: 400px;">
+                <div style="font-size: 3rem; margin-bottom: var(--space-4);">✅</div>
+                <h3 style="color: var(--success); margin-bottom: var(--space-2);">Message Sent!</h3>
+                <p style="margin-bottom: var(--space-6);">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                <button class="btn btn-primary" onclick="document.getElementById('successPopup').style.display='none'">Close</button>
+            </div>
         </div>
     </main>
 
-    <div class="success-popup" id="successPopup">
-        <h3>Success!</h3>
-        <p>Your message has been sent successfully.</p>
-        <button class="btn btn-primary btn-close" onclick="document.getElementById('successPopup').style.display='none'">Close</button>
-    </div>
-
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures.</p><div class="footer-social"><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</a><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</a><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</a><a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</a></div></div>
+                <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div>
+                <div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div>
+                <div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 St. Andrew's College. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms</a></div></div>
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
     <script src="js/validation.js"></script>
 </body>
 </html>

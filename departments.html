@@ -3,88 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Andrew's College | Departments</title>
+    <meta name="description" content="Explore our departments and courses at St. Andrew's College – BSc IT, BCom, BA, BMS, Psychology, and Computer Science.">
+    <title>Departments & Courses | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/departments.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/darkmode.css">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner">
         <div class="container">
-            <h1 class="logo">St. Andrew's College</h1>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="departments.html">Departments</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="student-portal.html">Student Portal</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button class="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+            <a href="index.html" class="logo" aria-label="St. Andrew's College Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a>
+            <nav class="nav-links" role="navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html" class="active">Departments</a><a href="events.html">Events</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html">Library</a><a href="contact.html">Contact</a></nav>
+            <div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
         </div>
     </header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html" class="active"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
 
-    <main class="container page-content">
-        <h2 class="page-title">Departments & Courses</h2>
-        
-        <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Search courses, departments, faculty...">
-        </div>
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Departments</span></nav>
+                <h1>Departments & Courses</h1>
+                <p>Explore our diverse range of academic programs designed to prepare you for success in the modern world.</p>
+            </div>
+        </section>
 
-        <section class="departments-grid" id="departmentsGrid">
-            <div class="department-card" data-search="bsc it information technology computers">
-                <h3>BSc IT</h3>
-                <p><strong>Description:</strong> Bachelor of Science in Information Technology.</p>
-                <p><strong>Faculty:</strong> Prof. Alan Turing</p>
-                <p><strong>Subjects:</strong> Programming, Databases, Networking</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
-            </div>
-            <div class="department-card" data-search="bcom commerce business finance">
-                <h3>BCom</h3>
-                <p><strong>Description:</strong> Bachelor of Commerce.</p>
-                <p><strong>Faculty:</strong> Dr. Adam Smith</p>
-                <p><strong>Subjects:</strong> Accounting, Economics, Finance</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
-            </div>
-            <div class="department-card" data-search="ba arts humanities">
-                <h3>BA</h3>
-                <p><strong>Description:</strong> Bachelor of Arts.</p>
-                <p><strong>Faculty:</strong> Dr. Jane Austen</p>
-                <p><strong>Subjects:</strong> Literature, History, Sociology</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
-            </div>
-            <div class="department-card" data-search="bms management studies business">
-                <h3>BMS</h3>
-                <p><strong>Description:</strong> Bachelor of Management Studies.</p>
-                <p><strong>Faculty:</strong> Prof. Peter Drucker</p>
-                <p><strong>Subjects:</strong> Marketing, HR, Operations</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
-            </div>
-            <div class="department-card" data-search="psychology human mind behaviour">
-                <h3>Psychology</h3>
-                <p><strong>Description:</strong> Study of human mind and behavior.</p>
-                <p><strong>Faculty:</strong> Dr. Sigmund Freud</p>
-                <p><strong>Subjects:</strong> Clinical, Cognitive, Social Psychology</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
-            </div>
-            <div class="department-card" data-search="computer science cs coding">
-                <h3>Computer Science</h3>
-                <p><strong>Description:</strong> Deep dive into computing systems.</p>
-                <p><strong>Faculty:</strong> Dr. Grace Hopper</p>
-                <p><strong>Subjects:</strong> Algorithms, OS, Architecture</p>
-                <a href="#" class="btn btn-outline btn-outline-primary">Learn More</a>
+        <section class="section" aria-label="Search courses">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto var(--space-10); text-align: center;">
+                    <div style="position: relative;">
+                        <input type="text" id="searchInput" class="form-input" placeholder="Search courses, departments, faculty..." style="padding-left: 3rem; font-size: 1rem; padding: var(--space-4) var(--space-4) var(--space-4) 3rem; border-radius: var(--radius-full); box-shadow: var(--shadow-md);" aria-label="Search courses">
+                        <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.125rem; color: var(--text-muted);">🔍</span>
+                    </div>
+                </div>
+
+                <div class="courses-grid" id="departmentsGrid" style="grid-template-columns: repeat(3, 1fr);">
+                    <article class="course-card animate-on-scroll department-card" data-search="bsc it information technology computers programming">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="BSc IT Lab" loading="lazy">
+                            <span class="course-card-badge">Popular</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>BSc Information Technology</h3>
+                            <p>Comprehensive program covering programming, databases, networking, AI, and web development with hands-on projects.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👨‍🏫</span> Prof. Alan Turing (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>🔬</span> 5 Computer Labs</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 120 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+
+                    <article class="course-card animate-on-scroll department-card" data-search="bcom commerce business finance accounting economics">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="BCom Finance Class" loading="lazy">
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Bachelor of Commerce</h3>
+                            <p>Strong foundation in accounting, economics, finance, and business law with industry-relevant curriculum.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👨‍🏫</span> Dr. Adam Smith (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 150 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+
+                    <article class="course-card animate-on-scroll department-card" data-search="ba arts humanities literature history sociology">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="BA Literature Class" loading="lazy">
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Bachelor of Arts</h3>
+                            <p>Explore Literature, History, Psychology, and Sociology with experienced faculty and research opportunities.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👩‍🏫</span> Dr. Jane Austen (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 100 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+
+                    <article class="course-card animate-on-scroll department-card" data-search="bms management studies business marketing hr operations">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="BMS Workshop" loading="lazy">
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Bachelor of Management Studies</h3>
+                            <p>Comprehensive management education covering marketing, HR, operations, and strategic management.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👨‍🏫</span> Prof. Peter Drucker (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 80 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+
+                    <article class="course-card animate-on-scroll department-card" data-search="psychology human mind behaviour clinical cognitive social">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop" alt="Psychology Lab" loading="lazy">
+                        </div>
+                        <div class="course-card-body">
+                            <h3>BSc Psychology</h3>
+                            <p>Study of human mind and behavior with practical training in clinical, cognitive, and social psychology.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👩‍🏫</span> Dr. Sigmund Freud (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>🔬</span> Psychology Lab</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 60 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+
+                    <article class="course-card animate-on-scroll department-card" data-search="computer science cs coding algorithms software engineering">
+                        <div class="course-card-image">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="CS Programming Lab" loading="lazy">
+                            <span class="course-card-badge badge" style="background: var(--success); color: white;">New</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>BSc Computer Science</h3>
+                            <p>Deep dive into computing systems, algorithms, operating systems, software engineering, and AI/ML.</p>
+                            <div style="display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0;">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>👩‍🏫</span> Dr. Grace Hopper (HOD)</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>🔬</span> AI/ML Lab</div>
+                                <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: var(--text-secondary);"><span>📊</span> 80 Seats</div>
+                            </div>
+                            <div class="course-card-meta"><span>⏱ 3 Years</span><span>🎓 UG</span></div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures through quality education.</p><div class="footer-social"><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</a><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</a><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</a><a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</a></div></div>
+                <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div>
+                <div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div>
+                <div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 St. Andrew's College. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms</a></div></div>
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>

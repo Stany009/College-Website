@@ -3,74 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Andrew's College | Admissions</title>
+    <meta name="description" content="Apply to St. Andrew's College – Admission process, eligibility, fee structure, scholarships, and FAQ for 2026-27.">
+    <title>Admissions | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/darkmode.css">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner">
         <div class="container">
-            <h1 class="logo">St. Andrew's College</h1>
-            <nav class="nav-links">
+            <a href="index.html" class="logo" aria-label="St. Andrew's College Home">
+                <div class="logo-icon">SA</div>
+                <div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div>
+            </a>
+            <nav class="nav-links" role="navigation" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="admissions.html">Admissions</a>
+                <a href="admissions.html" class="active">Admissions</a>
                 <a href="departments.html">Departments</a>
+                <a href="events.html">Events</a>
+                <a href="placements.html">Placements</a>
+                <a href="campus-life.html">Campus Life</a>
                 <a href="gallery.html">Gallery</a>
-                <a href="student-portal.html">Student Portal</a>
+                <a href="library.html">Library</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <button class="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+            <div class="nav-actions">
+                <button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button>
+                <a href="student-portal.html" class="nav-cta">Student Portal</a>
+                <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
         </div>
     </header>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+            <li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li>
+            <li><a href="admissions.html" class="active"><span class="nav-icon">📝</span> Admissions</a></li>
+            <li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li>
+            <li><a href="events.html"><span class="nav-icon">🎉</span> Events</a></li>
+            <li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li>
+            <li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li>
+            <li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li>
+            <li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li>
+            <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
+        </ul>
+        <div class="mobile-nav-divider"></div>
+        <a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a>
+    </div>
 
-    <main class="container page-content">
-        <h2 class="page-title">Admissions</h2>
-        
-        <section class="admission-section">
-            <h3>Admission Procedure</h3>
-            <ol>
-                <li>Fill out the online application form.</li>
-                <li>Submit required documents.</li>
-                <li>Appear for the entrance test/interview (if applicable).</li>
-                <li>Pay the admission fees upon selection.</li>
-            </ol>
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator" aria-hidden="true">›</span>
+                    <span aria-current="page">Admissions</span>
+                </nav>
+                <h1>Admissions 2026–27</h1>
+                <p>Begin your journey at St. Andrew's College. Our streamlined admission process ensures a smooth experience for every student.</p>
+            </div>
         </section>
 
-        <section class="admission-section split-layout">
-            <div class="card">
-                <h3>Eligibility</h3>
-                <p>A minimum of 50% in the qualifying examination is required for undergraduate courses.</p>
-            </div>
-            <div class="card">
-                <h3>Documents Required</h3>
-                <ul>
-                    <li>10th and 12th Marksheets</li>
-                    <li>Transfer Certificate</li>
-                    <li>Passport Size Photographs</li>
-                    <li>ID Proof</li>
-                </ul>
+        <!-- Admission Process -->
+        <section class="section" aria-labelledby="process-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="process-heading">Admission Process</h2>
+                    <p>Follow these simple steps to secure your place at St. Andrew's College.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div class="process-step">1</div>
+                        <h4 style="margin-bottom: var(--space-2);">Online Application</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Fill out the online application form with your personal and academic details.</p>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div class="process-step">2</div>
+                        <h4 style="margin-bottom: var(--space-2);">Submit Documents</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Upload required documents including marksheets, certificates, and photographs.</p>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div class="process-step">3</div>
+                        <h4 style="margin-bottom: var(--space-2);">Entrance Test</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Appear for the entrance test or interview (if applicable for your course).</p>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="text-align: center; padding: var(--space-8);">
+                        <div class="process-step success">✓</div>
+                        <h4 style="margin-bottom: var(--space-2);">Confirm Admission</h4>
+                        <p style="font-size: 0.875rem; margin: 0;">Pay the admission fees and confirm your seat. Welcome to St. Andrew's!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="admission-section">
-            <h3>Fee Structure</h3>
-            <p>Please contact the admission office for detailed fee structures for the current academic year.</p>
-            
-            <h3>FAQs</h3>
-            <details>
-                <summary>Is there a hostel facility available?</summary>
-                <p>Yes, separate hostels for boys and girls are available on campus.</p>
-            </details>
+        <!-- Eligibility & Documents -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="eligibility-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="eligibility-heading">Eligibility & Documents</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+                    <div class="card animate-slide-left" style="padding: var(--space-8);">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">📋 Eligibility Criteria</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span style="color: var(--success); font-weight: 700;">✓</span>
+                                <span>Minimum 50% in qualifying examination (10+2) for UG courses</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span style="color: var(--success); font-weight: 700;">✓</span>
+                                <span>Minimum 55% in graduation for PG courses</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span style="color: var(--success); font-weight: 700;">✓</span>
+                                <span>Valid entrance test score (where applicable)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span style="color: var(--success); font-weight: 700;">✓</span>
+                                <span>Age limit: 17-25 years for UG courses</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card animate-slide-right" style="padding: var(--space-8);">
+                        <h3 style="margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-2);">📁 Documents Required</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>📄</span>
+                                <span>10th and 12th Marksheets (Original + Copies)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>📄</span>
+                                <span>Transfer Certificate (TC)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>📷</span>
+                                <span>Passport Size Photographs (6 copies)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>🪪</span>
+                                <span>Valid ID Proof (Aadhaar/Passport)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>📄</span>
+                                <span>Caste Certificate (if applicable)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3); background: var(--bg-subtle); border-radius: var(--radius-md);">
+                                <span>📄</span>
+                                <span>Migration Certificate</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fee Structure -->
+        <section class="section" aria-labelledby="fee-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="fee-heading">Fee Structure 2026–27</h2>
+                    <p>Transparent and affordable fee structure for all our programs.</p>
+                </div>
+                <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: var(--primary); color: white;">
+                                <th style="padding: var(--space-4) var(--space-6); text-align: left; font-weight: 600;">Course</th>
+                                <th style="padding: var(--space-4) var(--space-6); text-align: left; font-weight: 600;">Duration</th>
+                                <th style="padding: var(--space-4) var(--space-6); text-align: left; font-weight: 600;">Annual Fee</th>
+                                <th style="padding: var(--space-4) var(--space-6); text-align: left; font-weight: 600;">Total Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BSc IT</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹85,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹2,55,000</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-subtle);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BCom</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹45,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹1,35,000</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BA</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹35,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹1,05,000</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-subtle);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BMS</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹55,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹1,65,000</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BCA</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹75,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹2,25,000</td>
+                            </tr>
+                            <tr style="background: var(--bg-subtle);">
+                                <td style="padding: var(--space-4) var(--space-6); font-weight: 600;">BSc Psychology</td>
+                                <td style="padding: var(--space-4) var(--space-6);">3 Years</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹50,000</td>
+                                <td style="padding: var(--space-4) var(--space-6);">₹1,50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="animate-on-scroll" style="text-align: center; margin-top: var(--space-6); color: var(--text-muted); font-size: 0.875rem;">
+                    * Fees are subject to revision. Hostel and lab fees are additional. Contact admission office for detailed breakup.
+                </p>
+            </div>
+        </section>
+
+        <!-- Scholarships -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="scholarship-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="scholarship-heading">Scholarships & Financial Aid</h2>
+                    <p>We believe financial constraints should never stop a deserving student from pursuing education.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">🏆</div>
+                        <h3 style="margin-bottom: var(--space-3);">Merit Scholarship</h3>
+                        <p>Up to 50% tuition fee waiver for students scoring above 90% in qualifying exams.</p>
+                        <span class="badge badge-secondary">Up to 50% Off</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">💝</div>
+                        <h3 style="margin-bottom: var(--space-3);">Need-Based Aid</h3>
+                        <p>Financial assistance for students from economically weaker sections based on family income.</p>
+                        <span class="badge badge-primary">25-100% Off</span>
+                    </div>
+                    <div class="card-feature animate-on-scroll" style="padding: var(--space-8);">
+                        <div style="font-size: 2rem; margin-bottom: var(--space-4);">⚽</div>
+                        <h3 style="margin-bottom: var(--space-3);">Sports Quota</h3>
+                        <p>Scholarships for students with outstanding achievements in sports at state/national level.</p>
+                        <span class="badge badge-success">Up to 75% Off</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Prospectus CTA -->
+        <section class="section" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="newsletter-section animate-on-scroll" style="text-align: center;">
+                    <h2 id="cta-heading" style="color: white;">Ready to Start Your Journey?</h2>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 1.125rem; margin-bottom: var(--space-8);">Download our detailed prospectus or apply online today.</p>
+                    <div style="display: flex; gap: var(--space-4); justify-content: center; position: relative; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-secondary btn-lg">📥 Download Prospectus</a>
+                        <a href="#" class="btn btn-white btn-lg">Apply Online →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission FAQ -->
+        <section class="section" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="faq-heading">Admission FAQ</h2>
+                </div>
+                <div class="faq-list animate-on-scroll">
+                    <div class="faq-item active">
+                        <button class="faq-question" aria-expanded="true">
+                            When do admissions open for 2026-27?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer" style="max-height: 200px;">
+                            <div class="faq-answer-inner">Admissions for the 2026-27 academic year open on August 1, 2026. The last date to submit applications is September 30, 2026. Early applications are encouraged as seats are limited.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is there a hostel facility available?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Yes, separate hostels for boys and girls are available on campus. The hostels are equipped with Wi-Fi, mess facilities, 24/7 security, laundry services, and recreational areas. Monthly charges range from ₹8,000 to ₹12,000.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I get a fee waiver?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Yes, we offer merit-based scholarships, need-based financial aid, and sports quotas. Contact our admission office or visit the scholarship section for detailed eligibility criteria and application process.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is there an entrance test?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Most undergraduate courses are based on merit (10+2 marks). However, BSc IT and BCA require a college entrance test. MBA and other PG courses may require CET/MAT scores.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div>
+                    <p>Empowering minds and shaping futures through quality education, modern infrastructure, and a commitment to holistic development.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</a>
+                        <a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</a>
+                        <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</a>
+                        <a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+                <div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="faculty-portal.html">Faculty Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div>
+                <div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road, Education City</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li><li><a href="#">🕐 Mon–Fri: 9AM – 4PM</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 St. Andrew's College. All rights reserved.</p>
+                <div><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Accessibility</a></div>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

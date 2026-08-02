@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Events at St. Andrew's College – Cultural fests, tech symposiums, sports tournaments, and more.">
+    <title>Events | St. Andrew's College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+    <!-- Page Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span class="loader-logo-text">SA</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <header class="navbar scrolled" role="banner"><div class="container"><a href="index.html" class="logo" aria-label="Home"><div class="logo-icon">SA</div><div class="logo-text">St. Andrew's College<small>Excellence in Education</small></div></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="departments.html">Departments</a><a href="events.html" class="active">Events</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="gallery.html">Gallery</a><a href="library.html">Library</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><button class="nav-btn dark-mode-toggle" aria-label="Toggle dark mode"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button><a href="student-portal.html" class="nav-cta">Student Portal</a><button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav" id="mobile-nav"><ul class="mobile-nav-links"><li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li><li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li><li><a href="admissions.html"><span class="nav-icon">📝</span> Admissions</a></li><li><a href="departments.html"><span class="nav-icon">📚</span> Departments</a></li><li><a href="events.html" class="active"><span class="nav-icon">🎉</span> Events</a></li><li><a href="placements.html"><span class="nav-icon">💼</span> Placements</a></li><li><a href="campus-life.html"><span class="nav-icon">🏫</span> Campus Life</a></li><li><a href="gallery.html"><span class="nav-icon">📷</span> Gallery</a></li><li><a href="library.html"><span class="nav-icon">📖</span> Library</a></li><li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li></ul><div class="mobile-nav-divider"></div><a href="student-portal.html" class="mobile-nav-cta">🎓 Student Portal</a></div>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator" aria-hidden="true">›</span><span aria-current="page">Events</span></nav>
+                <h1>Events & Happenings</h1>
+                <p>Stay updated with the latest events, competitions, and celebrations at St. Andrew's College.</p>
+            </div>
+        </section>
+
+        <!-- Featured Event with Countdown -->
+        <section class="section" aria-labelledby="featured-heading">
+            <div class="container">
+                <div class="card event-featured animate-on-scroll" style="padding: var(--space-12); text-align: center;">
+                    <div style="position: relative; z-index: 1;">
+                        <span class="badge" style="background: rgba(255,255,255,0.15); color: white; margin-bottom: var(--space-4); display: inline-block;">⭐ Featured Event</span>
+                        <h2 style="color: white; margin-bottom: var(--space-4);">Annual Cultural Fest 2026</h2>
+                        <p style="color: rgba(255,255,255,0.75); font-size: 1.125rem; max-width: 600px; margin: 0 auto var(--space-8); position: relative;">Join us for three days of music, dance, drama, art, and celebration. The biggest event of the year!</p>
+                        <div style="display: flex; justify-content: center; gap: var(--space-8); margin-bottom: var(--space-8); position: relative;">
+                            <div style="text-align: center;"><div class="countdown-number" id="countdown-days">13</div><div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Days</div></div>
+                            <div style="text-align: center;"><div class="countdown-number" id="countdown-hours">08</div><div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Hours</div></div>
+                            <div style="text-align: center;"><div class="countdown-number" id="countdown-mins">45</div><div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Minutes</div></div>
+                            <div style="text-align: center;"><div class="countdown-number" id="countdown-secs">30</div><div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Seconds</div></div>
+                        </div>
+                        <a href="#" class="btn btn-secondary btn-lg">Register Now →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="section" style="background: var(--bg-subtle);" aria-labelledby="upcoming-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="upcoming-heading">Upcoming Events</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="height: 8px; background: linear-gradient(90deg, var(--primary), var(--primary-light));"></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                                <span class="badge badge-primary">Tech</span>
+                                <span style="font-size: 0.8125rem; color: var(--text-muted);">Sep 10, 2026</span>
+                            </div>
+                            <h3 style="font-size: 1.125rem; margin-bottom: var(--space-2);">Tech Symposium – Future of AI</h3>
+                            <p style="font-size: 0.875rem; margin-bottom: var(--space-4);">Explore cutting-edge AI technologies with industry experts and researchers.</p>
+                            <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">
+                                <span>📍 CS Block</span><span>🕐 10:00 AM</span>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm" style="width: 100%;">Register →</a>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="height: 8px; background: linear-gradient(90deg, var(--success), #34d399);"></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                                <span class="badge badge-success">Sports</span>
+                                <span style="font-size: 0.8125rem; color: var(--text-muted);">Sep 20, 2026</span>
+                            </div>
+                            <h3 style="font-size: 1.125rem; margin-bottom: var(--space-2);">Inter-College Sports Tournament</h3>
+                            <p style="font-size: 0.875rem; margin-bottom: var(--space-4);">Annual sports competition featuring cricket, football, basketball, and athletics.</p>
+                            <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">
+                                <span>📍 Sports Complex</span><span>🕐 9:00 AM</span>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm" style="width: 100%;">Register →</a>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="height: 8px; background: linear-gradient(90deg, var(--secondary), var(--secondary-light));"></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                                <span class="badge badge-secondary">Academic</span>
+                                <span style="font-size: 0.8125rem; color: var(--text-muted);">Oct 5, 2026</span>
+                            </div>
+                            <h3 style="font-size: 1.125rem; margin-bottom: var(--space-2);">Guest Lecture: Industry Insights</h3>
+                            <p style="font-size: 0.875rem; margin-bottom: var(--space-4);">Learn from industry leaders about career opportunities and emerging trends.</p>
+                            <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-4);">
+                                <span>📍 Seminar Hall</span><span>🕐 2:00 PM</span>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm" style="width: 100%;">Register →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section class="section" aria-labelledby="past-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    
+                    <h2 id="past-heading">Past Events</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+                    <div class="card animate-on-scroll" style="padding: var(--space-6); display: flex; gap: var(--space-5);">
+                        <div style="width: 80px; height: 80px; background: rgba(11,61,145,0.08); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">🎭</div>
+                        <div><h4 style="margin-bottom: var(--space-1);">Annual Day 2025</h4><p style="font-size: 0.875rem; margin-bottom: var(--space-2);">Grand celebration with cultural performances and prize distribution.</p><span class="badge badge-success">Completed</span></div>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-6); display: flex; gap: var(--space-5);">
+                        <div style="width: 80px; height: 80px; background: rgba(212,175,55,0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">💻</div>
+                        <div><h4 style="margin-bottom: var(--space-1);">Hackathon 2025</h4><p style="font-size: 0.875rem; margin-bottom: var(--space-2);">24-hour coding marathon with 200+ participants from 15 colleges.</p><span class="badge badge-success">Completed</span></div>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-6); display: flex; gap: var(--space-5);">
+                        <div style="width: 80px; height: 80px; background: rgba(34,197,94,0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">🏆</div>
+                        <div><h4 style="margin-bottom: var(--space-1);">Sports Day 2025</h4><p style="font-size: 0.875rem; margin-bottom: var(--space-2);">Annual athletics meet with 500+ athletes competing in 20+ events.</p><span class="badge badge-success">Completed</span></div>
+                    </div>
+                    <div class="card animate-on-scroll" style="padding: var(--space-6); display: flex; gap: var(--space-5);">
+                        <div style="width: 80px; height: 80px; background: rgba(59,130,246,0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">📚</div>
+                        <div><h4 style="margin-bottom: var(--space-1);">Literary Fest 2025</h4><p style="font-size: 0.875rem; margin-bottom: var(--space-2);">Debate, poetry, creative writing, and book discussions.</p><span class="badge badge-success">Completed</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo-text" style="font-size: 1.25rem; margin-bottom: var(--space-4); color: white;">St. Andrew's College<small style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500;">Excellence in Education Since 1976</small></div><p>Empowering minds and shaping futures.</p><div class="footer-social"><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</a><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</a><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</a><a href="#" aria-label="LinkedIn"><span aria-hidden="true">💼</a></div></div><div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="departments.html">Departments</a></li><li><a href="placements.html">Placements</a></li></ul></div><div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="library.html">Library</a></li><li><a href="student-portal.html">Student Portal</a></li><li><a href="events.html">Events</a></li><li><a href="campus-life.html">Campus Life</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="contact.html">📍 123 College Road</a></li><li><a href="tel:+911234567890">📞 +91 123 456 7890</a></li><li><a href="mailto:info@standrews.edu">✉️ info@standrews.edu</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 St. Andrew's College. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms</a></div></div></div></footer>
+    <script src="js/script.js"></script><script src="js/darkmode.js"></script><script src="js/scroll.js"></script>
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('2026-08-15T10:00:00');
+            const now = new Date();
+            const diff = eventDate - now;
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+                document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
+                document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
+            }
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
