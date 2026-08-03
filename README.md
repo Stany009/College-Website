@@ -1,4 +1,4 @@
-# St. Andrew's College Website Redesign
+#  College Website Redesign
 
 ## Overview
 
